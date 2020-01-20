@@ -19,7 +19,7 @@ output:
 
 <div class="col-md-12 flex-box">
 <p class="landing-title">
-<span style="display:block;">Rmarkdown based website template</span>
+<span style="display:block;">Rmarkdown website template</span>
 <span style="display:block;">for workshops</span>
 </p>
 </div>
@@ -29,7 +29,7 @@ output:
 <span style="display:block;">Run R scripts during build</span>
 <span style="display:block;">Bootstrap skeleton</span>
 <span style="display:block;">Icons from FontAwesome</span>
-<span style="display:block;">Auto rendering using Travis-CI</span>
+<span style="display:block;">Auto rendering using GitHub Actions</span>
 </p>
 </div>
 
