@@ -27,7 +27,7 @@ output:
 <div class="col-md-12 flex-box">
 <p class="medium landing-bullets">
 <span style="display:block;">Run R scripts during build</span>
-<span style="display:block;">Bootstrap skeleton</span>
+<span style="display:block;">Bootstrap framework</span>
 <span style="display:block;">Icons from FontAwesome</span>
 <span style="display:block;">Auto rendering using GitHub Actions</span>
 </p>

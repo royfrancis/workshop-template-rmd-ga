@@ -79,7 +79,7 @@ jobs:
           # Create index file
           url_git=$(git config --get remote.origin.url)
           echo "Repo: $url_git"
-          str_user=$(echo $url_git | sed 's/https:\/\/github.com\///' | sed 's/.git//' | sed 's/\/.*//')
+          str_user=$(echo $url_git | sed -E 's/http.+github.com\/|\.git//g' | sed 's/\/.*//')
           echo "User: $str_user"
 
           printf "All current and previous workshop materials are listed below.\n\n" > index.md
