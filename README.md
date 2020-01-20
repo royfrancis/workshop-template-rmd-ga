@@ -155,13 +155,13 @@ For testing purposes, you can run `rmarkdown::render("bla.Rmd")` on individual R
 
 **DO NOT** push any rendered material such as `slide_topic.html`, `lab_topic.html` or supporting directories `slide_topic_files`, `lab_topic_files` etc to GitHub.
 
-## 2.4 How it all works
+## How it all works
 
 ![](data/common/versioning.png)
 
 The source content is maintained in the master branch. The source gets a new commit id anytime new content is pushed. The rendered material is maintained on the gh-pages branch under separate folders. These folders have the format YYMM. The contents of this folder is overwritten with a new push unless the directory name is changed (*output_dir* in `_site.yml`).  For convenience, last commit in the master branch for each workshop can be tagged as such **v1911** denoting YYMM. This can be used to easily connect a folder on gh-pages to the commit ID of the source code that produced it.
 
-### 2.4.1 GitHub Actions
+### GitHub Actions
 
 When the committed changes are pushed to GitHub, GitHub actions automatically runs to render the output. The `.github/workflows/main.yml` contains the workflow that runs to render the site. The script builds a linux container where R and necessary linux dependencies are installed. Then the R packages described under **packages_cran_repo** and **packages_bioc_repo** in `_site,yml` are installed. When completed, the R function `rmarkdown::render_site()` is executed to build the website.
 
@@ -169,7 +169,7 @@ The rendered html files, dependencies assets, data and other files are all moved
 
  The first GitHub build can take around 30-45 mins depending on the number of R packages. Subsequent builds take about 2 minutes since caching is enabled. Caches are removed after 7 days of last access. A push after that will require a full rebuild.
 
-### 2.4.2 render_site() function
+### render_site() function
 
 This function uses the information inside the config file `_site.yml`. The top navigation menu is described here. The default output style for all Rmd/md documents are specified under `output:`. Note that this described custom CSS style from `assets/labs.css` and custom footer from `assets/footer-lab.html`. If `output:` is specified within individual Rmd files, it overrides the default in `_site.yml`. The rendered output will automatically be moved to location specified under `output_dir`.
 
