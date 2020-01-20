@@ -1,0 +1,44 @@
+---
+title: "Content"
+output:
+  bookdown::html_document2:
+    toc: true
+    number_sections: true
+---
+
+```{r,child="assets/header-lab.Rmd"}
+```
+
+This page contains links to different lectures (slides) and practical exercises (labs) that are part of this workshop. The links below are similar to that under [Schedule](home_schedule.html) but organised here by topic.
+
+<div class="boxy boxy-lightbulb">
+Input code blocks are displayed like shown below. The code language is displayed above the block. Shell scripts (**SH**) are to be executed in the linux terminal. **R** scripts are to be run in R either through the terminal, RGui or RStudio.
+
+```{sh,eval=FALSE,block.title=TRUE}
+command
+```
+
+<i class="fas fa-exclamation-circle"></i> Note &nbsp; <i class="fas fa-lightbulb"></i> Tip &nbsp; <i class="fas fa-comments"></i> Discuss &nbsp; <i class="fas fa-clipboard-list"></i> Task
+</div>
+
+<br>
+
+# Markdown
+
+It is a good idea to familiarise yourself with basic markdown formatting.
+
+* [Markdown](lab_md.html)
+
+# Rmarkdown
+
+This section continues with incorporation of R code into markdown.
+
+* [Rmarkdown](lab_rmd.html)
+
+# Advanced Rmarkdown
+
+More examples of advanced usage of markdown, Rmarkdown and HTML.
+
+* [Advanced Rmarkdown](lab_rmdadv.html)
+
+***

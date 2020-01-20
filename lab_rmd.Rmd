@@ -1,0 +1,363 @@
+---
+title: "Rmarkdown"
+subtitle: "Workshop-Template-Rmd"
+author: "`r paste0('<b>NBIS</b> • ',format(Sys.time(), '%d-%b-%Y'))`"
+---
+
+```{r,child="assets/header-lab.Rmd"}
+```
+
+Load packages needed for this session.
+
+```{r,results="hide"}
+library(kableExtra)
+library(DT)
+library(ggplot2)
+library(dplyr)
+library(highcharter)
+library(plotly)
+library(ggiraph)
+library(dygraphs)
+library(networkD3)
+library(leaflet)
+library(crosstalk)
+```
+
+All formatting covered under markdown is also applicable here.
+
+# Executed code
+
+Code can be executed during document render. Code can be rendered in inline (within a sentence) or in code chunks (code blocks).
+
+R code can be executed inline line this `` `r "\u0060r Sys.Date()\u0060"` `` producing `r Sys.Date()`.
+
+R code can be executed inside code chunks like this  
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r}\n","Sys.Date()\n","``` \n"))
+```
+
+which shows the code and output.
+
+```{r}
+Sys.Date()
+```
+
+Arguments/Parameters to the code chunks are specified inside the `{}`. The first argument is the engine used to evaluate the code chunk. Here we mostly use `r`. Other options such as `python`, `bash` etc can be used. Code chunks can take many more optional arguments.
+
+The code and results can be hidden by `` `r "\u0060\u0060\u0060{r,echo=FALSE,results='hide'}\u0060"` ``.
+
+Here is another example of executed R code with input and output.
+
+```{r,echo=TRUE}
+data(iris)
+head(iris[,1:2])
+```
+
+All chunks options are listed [here](https://yihui.org/knitr/options/).
+
+The default code when executed shows input code and output results.
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r}\n","Sys.Date()\n","``` \n"))
+```
+
+```{r}
+Sys.Date()
+```
+
+Input code can be hidden.
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,echo=FALSE}\n","Sys.Date()\n","``` \n"))
+```
+
+```{r,echo=FALSE}
+Sys.Date()
+```
+
+Output results can be hidden
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,results='hide'}\n","Sys.Date()\n","``` \n"))
+```
+
+```{r,results="hide"}
+Sys.Date()
+```
+
+The code can be displayed with code highlighting but not executed.
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,eval=FALSE}\n","Sys.Date()\n","``` \n"))
+```
+
+```{r,eval=FALSE}
+Sys.Date()
+```
+
+# Images  
+## Using R  
+
+R chunks in RMarkdown can be used to control image display size using the arguemnt `out.width`.
+
+This image below is displayed at a size of 300 pixels.  
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,out.width=300}\n","knitr::include_graphics('assets/cover.jpg')\n","``` \n"))
+```
+
+```{r,echo=FALSE,fig.retina=NULL,out.width=300}
+knitr::include_graphics("assets/cover.jpg")
+```
+
+This image below is displayed at a size of 75 pixels.  
+
+```{r,echo=FALSE,comment=""}
+cat(paste0("```{r,out.width=75}\n","knitr::include_graphics('assets/cover.jpg')\n","``` \n"))
+```
+
+```{r,echo=FALSE,fig.retina=NULL,out.width=75}
+knitr::include_graphics("assets/cover.jpg")
+```
+
+# Math expressions  
+
+Some examples of rendering equations.
+
+```
+$e^{i\pi} + 1 = 0$
+```
+$e^{i\pi} + 1 = 0$
+
+```
+$$\frac{E \times X^2 \prod I}{2+7} = 432$$
+```
+$$\frac{E \times X^2 \prod I}{2+7} = 432$$
+
+```
+$$\sum_{i=1}^n X_i$$
+```
+$$\sum_{i=1}^n X_i$$
+
+```
+$$\int_0^{2\pi} \sin x~dx$$
+```
+$$\int_0^{2\pi} \sin x~dx$$
+
+```
+$\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}$
+```
+$\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}$
+
+```
+$\begin{eqnarray} X & \sim & \mathrm{N}(0,1)\\ Y & \sim & \chi^2_{n-p}\\ R & \equiv & X/Y \sim t_{n-p} \end{eqnarray}$
+```
+$\begin{eqnarray} X & \sim & \mathrm{N}(0,1)\\ Y & \sim & \chi^2_{n-p}\\ R & \equiv & X/Y \sim t_{n-p} \end{eqnarray}$
+
+```
+$\begin{eqnarray} P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\ & \leq & \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ & \leq & \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}$
+```
+$\begin{eqnarray} P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\ & \leq & \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ & \leq & \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}$
+
+# Tables  
+## Paged  
+
+View of the data using paged tables. This is the default output for RMarkdown.  
+
+`r tc(name="table_paged",caption="_Table using paged tibble._")`  
+
+```{r}
+iris[1:15,]
+```
+
+## kable  
+
+The most simple table using `kable` from R package `knitr`.
+
+```{r}
+knitr::kable(head(iris), 'html')
+```
+
+## kableExtra  
+
+More advanced table using [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) and [`formattable`](https://cran.r-project.org/web/packages/formattable/vignettes/formattable-data-frame.html).
+
+`r tc(name="table_kableextra",caption="_Table using kableextra._")` 
+
+```{r}
+ iris[c(1:4,51:53,105:108),] %>%
+  mutate(Sepal.Length=color_bar("lightsteelblue")(Sepal.Length)) %>%
+  mutate(Sepal.Width=color_tile("white","orange")(Sepal.Width)) %>%
+  mutate(Species=cell_spec(Species,"html",color="white",bold=T,
+    background=c("#8dd3c7","#fb8072","#bebada")[factor(.$Species)])) %>%
+  kable("html",escape=F) %>%
+  kable_styling(bootstrap_options=c("striped","hover","responsive"),
+                full_width=F,position="left") %>%
+  column_spec(5,width="3cm")
+```
+
+## DT  
+
+Interactive table using R package [`DT`](https://rstudio.github.io/DT/).
+
+`r tc(name="table_datatable",caption="_Table using datatable._")`  
+
+```{r}
+iris %>%
+  slice(1:15) %>%
+  datatable(options=list(pageLength=7))
+```
+
+# Static plots  
+## Base plot  
+
+* Plots using base R are widely used and may be good enough for most situations. 
+* But they lack a consistent coding framework.  
+
+```{r,fig.height=6,fig.width=6}
+{plot(x=iris$Sepal.Length,y=iris$Sepal.Width,
+      col=c("coral","steelblue","forestgreen")[iris$Species],
+      xlab="Sepal Length",ylab="Sepal Width",pch=19)
+legend(x=7,y=4.47,legend=c("setosa","versicolor","virginica"),
+       col=c("coral","steelblue","forestgreen"),pch=19)}
+```
+
+`r fc(name="static_base",caption="_Static plot using base plot._")`  
+
+## ggplot2  
+
+R package [`ggplot2`](http://ggplot2.org/) is one of the most versatile and complete plotting solutions.  
+
+```{r,fig.height=6,fig.width=8}
+iris %>%
+  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+
+  geom_point(size=2)+
+  labs(x="Sepal Length",y="Sepal Width")
+```
+
+`r fc(name="static_ggplot",caption="_Static plot using ggplot2._")`  
+
+# Interactive plots
+
+## highcharter  
+
+R package [`highcharter`](http://jkunst.com/highcharter/) is a wrapper around javascript library [`highcharts`](https://www.highcharts.com/).
+
+```{r}
+h <- iris %>%
+  hchart(.,"scatter",hcaes(x="Sepal.Length",y="Sepal.Width",group="Species")) %>%
+  hc_xAxis(title=list(text="Sepal Length"),crosshair=TRUE) %>%
+  hc_yAxis(title=list(text="Sepal Width"),crosshair=TRUE) %>%
+  hc_chart(zoomType="xy",inverted=FALSE) %>%
+  hc_legend(verticalAlign="top",align="right") %>%
+  hc_size(height=400)
+
+htmltools::tagList(list(h))
+```
+
+`r fc(name="interactive_highcharter",caption="_Interactive scatterplot using highcharter._")`  
+
+## plotly  
+
+R package [`plotly`](https://plot.ly/r/) provides R binding around javascript plotting library [`plotly`](https://plot.ly).
+
+```{r}
+p <- iris %>% 
+  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %>% 
+  add_markers()
+p
+```
+
+`r fc(name="interactive_plotly",caption="_Interactive scatterplot using plotly._")`  
+
+## ggplotly  
+
+`plotly` also has a function called `ggplotly` which converts a static ggplot2 object into an interactive plot.
+
+```{r,fig.height=5,fig.width=7}
+p <- iris %>%
+  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+
+  geom_point()+
+  labs(x="Sepal Length",y="Sepal Width")+
+  theme_bw(base_size=12)
+
+ggplotly(p,width=500,height=400)
+```
+
+`r fc(name="interactive_ggplotly",caption="_Interactive scatterplot using ggplotly._")`  
+
+## ggiraph  
+
+`ggiraph` is also an R package that can be used to convert a static ggplot2 object into an interactive plot.
+
+```{r,fig.height=5,fig.width=7}
+p <- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+
+      geom_point_interactive(aes(tooltip=paste0("<b>Petal Length:</b> ",Petal.Length,"\n<b>Sepal Length: </b>",Sepal.Length,"\n<b>Species: </b>",Species)),size=2)+
+  theme_bw()
+
+tooltip_css <- "background-color:#e7eef3;font-family:Roboto;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;"
+
+ggiraph(code=print(p),hover_css="cursor:pointer;stroke:black;fill-opacity:0.3",zoom_max=5,tooltip_extra_css=tooltip_css,tooltip_opacity=0.9)
+```
+
+`r fc(name="interactive_ggiraph",caption="_Interactive scatterplot using ggiraph._")`  
+
+## dygraphs  
+
+R package [`dygraphs`](http://rstudio.github.io/dygraphs/) provides R bindings for javascript library [dygraphs](http://dygraphs.com/) for time series data.  
+
+```{r,fig.height=5,fig.width=9}
+lungDeaths <- cbind(ldeaths, mdeaths, fdeaths)
+dygraph(lungDeaths,main="Deaths from Lung Disease (UK)") %>%
+  dyOptions(colors=c("#66C2A5","#FC8D62","#8DA0CB"))
+```
+
+`r fc(name="interactive_dygraph",caption="_Interactive time series plot using dygraph._")`  
+
+## Network graph  
+
+R package `networkD3` allows the use of interactive network graphs from the [D3.js](https://d3js.org/) javascript library.
+
+```{r}
+data(MisLinks,MisNodes)
+forceNetwork(Links=MisLinks,Nodes=MisNodes,Source="source",
+             Target="target",Value="value",NodeID="name",
+             Group="group",opacity=0.4)
+```
+
+`r fc(name="interactive_network",caption="_Interactive network plot._")`  
+
+## leaflet  
+
+R package [`leaflet`](https://rstudio.github.io/leaflet/) provides R bindings for javascript mapping library; [leafletjs](http://leafletjs.com/).  
+
+```{r}
+leaflet(height=500,width=700) %>% 
+  addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
+  #addProviderTiles(providers$Esri.NatGeoWorldMap) %>%
+  addMarkers(lat=57.639327,lng=18.288534,popup="RaukR") %>%
+  setView(lat=57.639327,lng=18.288534,zoom=15)
+```
+
+`r fc(name="interactive_map",caption="_Interactive map using leaflet._")`
+
+## crosstalk  
+
+R package [`crosstalk`](https://rstudio.github.io/crosstalk/index.html) allows `crosstalk` enabled plotting libraries to be linked. Through the shared 'key' variable, data points can be manipulated simultaneously on two independent plots.
+
+```{r,fig.height=8,message=FALSE,warning=FALSE}
+shared_quakes <- SharedData$new(quakes[sample(nrow(quakes), 100),])
+lf <- leaflet(shared_quakes,height=300) %>%
+        addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
+        addMarkers()
+py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %>% 
+        add_markers()
+
+htmltools::div(lf,py)
+```
+
+`r fc(name="interactive_crosstalk",caption="_Linking independent plots using crosstalk._")` 
+
+***
+

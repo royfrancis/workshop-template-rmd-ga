@@ -1,0 +1,36 @@
+date;room;dur;topic;teacher;assistant;link_slide;link_lab;link_room
+13/05/2019;E10:1309;40;Welcome;Person A;Person K;slide_sample.html;;http://bit.ly/2UKjEoQ
+;;40;Markdown;Person A;;;lab_md.html;
+;;20;Coffee Break;;;;;
+;;40;Rmarkdown;Person A;Person K;;lab_rmd.html;
+;;40;Advanced Rmd;Person A;;;lab_rmdadv.html;
+;;60;Lunch;;;;;
+;;40;This a looooooooooooooong topic title;Person A;;;;
+;;40;Topic D;Person A;;slide_uppmax.pdf;;
+;;40;Topic E;Person A;;;;
+;;20;Coffee Break;;;;;
+;;40;Topic F;Person A;;;;
+;;40;Topic G;Person A;;;;
+14/05/2019;E10:1309;40;Topic;Person B;;;;
+;;40;Topic;Person B;;;;
+;;20;Coffee Break;;;;;
+;;40;Topic;Person B;Person K, Person L;;;
+;;40;Topic;Person B;Person K, Person L;;;
+;;60;Lunch;;;;;
+;;40;Topic;Person B;;;;
+;;40;Topic;Person B;;;;
+;;40;Topic;Person B;;;;
+;;20;Coffee Break;;;;;
+;;40;Topic;Person B;Person K, Person L;;;
+;;40;Topic;Person B;Person K, Person L;;;
+15/05/2019;E10:1309;40;Topic;Person C;;;;
+;;40;Topic;Person C;;;;
+;;20;Coffee Break;;;;;
+;;40;Topic;Person C;;;;
+;;40;Topic;Person C;;;;
+;;60;Lunch;;;;;
+;;40;Topic;Person C;;;;
+;;40;Topic;Person C;;;;
+;;40;Topic;Person C;;;;
+;;20;Coffee Break;;;;;
+;;40;Conclusion;Person C;;;;
