@@ -40,6 +40,7 @@ jobs:
       - name: Install R dependencies
         if: steps.cache-rp.outputs.cache-hit != 'true'
         run: |
+          Rscript -e 'install.packages("yaml")'
           Rscript -e 'install.packages(yaml::read_yaml("_site.yml")$packages$packages_cran_repo)'
           Rscript -e 'install.packages(yaml::read_yaml("_site.yml")$packages$packages_cran_student)'
           Rscript -e 'tryCatch({BiocManager::install(yaml::read_yaml("_site.yml")$packages$packages_bioc_repo)'
