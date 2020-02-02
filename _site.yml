@@ -2,6 +2,7 @@ name: Workshop-Template-Rmd-Travis
 favicon: assets/favicon.png
 output_dir: 2001
 uppmax_project: XXXXXXXX
+uppmax_res_1: XXXXXX
 # location options are lund, umea or uppsala
 location: uppsala
 exclude: ["docs","README.md","schedule.csv","LICENSE","LICENSE.md","scripts","tmprepo"]
@@ -85,4 +86,3 @@ packages:
  packages_github_student:
  packages_github_repo:
   - rstudio/fontawesome
-

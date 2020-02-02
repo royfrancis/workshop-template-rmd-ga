@@ -52,10 +52,10 @@ If this repo is updated for a different date and location, this is minimum chang
     - Columns are delimited by `;`
     - Do not change the number of columns, position of columns, column names or date format
     - Rows can be freely added or removed
-    - Set date, room, dur (in min), topic and person as needed
+    - Set date, room, start_time, end_time, topic and person as needed
     - *date*: Full date for each day in format dd/mm/yyyy. Missing/empty cells are filled down automatically
     - *room*: (Optional) Room number for the workshop. Missing/empty cells are filled down automatically
-    - *dur*: Duration for the topic in minutes
+    - *start_time/end_time*: Start and end time for session (Eg: 09:00)
     - *topic*: Topic name (Keep it short)
     - *teacher*: Name of the person covering the topic
     - *assistant*, *`link_slide`*, *`link_lab`* and *`link_room`* are optional. If included, it will show up on the schedule
@@ -64,7 +64,6 @@ If this repo is updated for a different date and location, this is minimum chang
     - *link_lab*: (Optional) Link to the lab material. Local links can be like `lab_topic.html`. This is the labelling convention used.  
     - *link_room*: (Optional) Link to the room location. Can be a google map link, mazemap link etc. External links must start with `http://`
 4. Optionally update **home_schedule.Rmd**
-    - Start time is set to **09:00** by default
 5. Optionally update **home_precourse.Rmd** with instructions are needed
     - R packages for students to install are shown here
     - Uppmax ID is retrieved from **`_site.yml`**

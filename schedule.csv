@@ -1,36 +1,20 @@
-date;room;dur;topic;teacher;assistant;link_slide;link_lab;link_room
-13/05/2019;E10:1309;40;Welcome;Person A;Person K;slide_sample.html;;http://bit.ly/2UKjEoQ
-;;40;Markdown;Person A;;;lab_md.html;
-;;20;Coffee Break;;;;;
-;;40;Rmarkdown;Person A;Person K;;lab_rmd.html;
-;;40;Advanced Rmd;Person A;;;lab_rmdadv.html;
-;;60;Lunch;;;;;
-;;40;This a looooooooooooooong topic title;Person A;;;;
-;;40;Topic D;Person A;;slide_uppmax.pdf;;
-;;40;Topic E;Person A;;;;
-;;20;Coffee Break;;;;;
-;;40;Topic F;Person A;;;;
-;;40;Topic G;Person A;;;;
-14/05/2019;E10:1309;40;Topic;Person B;;;;
-;;40;Topic;Person B;;;;
-;;20;Coffee Break;;;;;
-;;40;Topic;Person B;Person K, Person L;;;
-;;40;Topic;Person B;Person K, Person L;;;
-;;60;Lunch;;;;;
-;;40;Topic;Person B;;;;
-;;40;Topic;Person B;;;;
-;;40;Topic;Person B;;;;
-;;20;Coffee Break;;;;;
-;;40;Topic;Person B;Person K, Person L;;;
-;;40;Topic;Person B;Person K, Person L;;;
-15/05/2019;E10:1309;40;Topic;Person C;;;;
-;;40;Topic;Person C;;;;
-;;20;Coffee Break;;;;;
-;;40;Topic;Person C;;;;
-;;40;Topic;Person C;;;;
-;;60;Lunch;;;;;
-;;40;Topic;Person C;;;;
-;;40;Topic;Person C;;;;
-;;40;Topic;Person C;;;;
-;;20;Coffee Break;;;;;
-;;40;Conclusion;Person C;;;;
+date;room;start_time;end_time;topic;teacher;assistant;link_slide;link_lab;link_room
+13/05/2019;E10:1309;09:00;10:00;Welcome;Person A;Person K;slide_sample.html;;http://bit.ly/2UKjEoQ
+;;10:00;11:00;Markdown;Person A;;;lab_md.html;
+;;11:00;12:00;Rmarkdown;Person A;Person K;;lab_rmd.html;
+;;12:00;13:00;Lunch;;;;;
+;;13:00;14:00;Advanced Rmd;Person A;;;lab_rmdadv.html;
+;;14:00;16:00;This a looooooooooooooong topic title;Person A;;;;
+;;16:00;17:00;Topic D;Person A;;slide_uppmax.pdf;;
+14/05/2019;E10:1309;09:00;10:00;Topic;Person B;;;;
+;;10:00;11:00;Topic;Person B;Person K, Person L;;;
+;;11:00;12:00;Lunch;;;;;
+;;12:00;13:00;Topic;Person B;;;;
+;;13:00;14:00;Topic;Person B;;;;
+;;14:00;17:00;Topic;Person B;Person K, Person L;;;
+15/05/2019;E10:1309;09:00;10:00;Topic;Person C;;;;
+;;10:00;11:00;Topic;Person C;;;;
+;;11:00;12:00;Topic;Person C;;;;
+;;12:00;13:00;Lunch;;;;;
+;;13:00;16:30;Topic;Person C;;;;
+;;16:30;17:00;Conclusion;Person C;;;;
