@@ -1,10 +1,15 @@
-name: Workshop-Template-Rmd-Travis
-favicon: assets/favicon.png
+name: Workshop-Template-Rmd-Ga
 output_dir: 2001
 uppmax_project: XXXXXXXX
 uppmax_res_1: XXXXXX
 # location options are lund, umea or uppsala
 location: uppsala
+assistants:
+ - "JD: John Doe"
+ - "MS: Marta Skinner"
+ - "DR: Daniel Russ"
+
+favicon: assets/favicon.png
 exclude: ["docs","README.md","schedule.csv","LICENSE","LICENSE.md","scripts","tmprepo"]
 navbar:
   title: '<img src="assets/logo.svg" id="logo" style="height:30px;margin:0;"/>'
@@ -49,21 +54,14 @@ output:
 packages:
  packages_cran_student:
   - BiocManager
-  - devtools
+  - remotes
   - dplyr
-  - enrichR
   - ggplot2
-  - ggpubr
-  - pheatmap
-  - pvclust
-  - rafalib
   - stringr
   - tidyr
  packages_bioc_student:
   - biomaRt
-  - DESeq2
-  - edgeR
-  - fgsea
+ packages_github_student:
  packages_cran_repo:
   - bookdown
   - captioner
@@ -83,6 +81,6 @@ packages:
   - xaringan
   - yaml
  packages_bioc_repo:
- packages_github_student:
  packages_github_repo:
   - rstudio/fontawesome
+
