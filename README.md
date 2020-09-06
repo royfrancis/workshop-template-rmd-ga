@@ -39,17 +39,18 @@ Fork/clone the repository. Only work in the master branch.
 If this repo is updated for a different date and location, this is minimum changes required.
 
 1. Update **`_site.yml`**
-    - **Set argument `output_dir:` to a year-month (YYMM) combination like 1908**
-    - Set `uppmax_project` if needed. This is used in **home_precourse.Rmd**
-    - Check arguments `name:` and `title:`
+    - **Set argument `output_dir:` to a year-month (YYMM) combination like 1908**. This is important and the first thing to do, so that output from old courses are not overwritten.
+    - Set `uppmax_project:` (Optional) This is used in **home_precourse.Rmd**
+    - Check if the `name:` of the workshop is correct.
     - Check `location:`. This affects details displayed in **home_info.Rmd**.
+    - Check `assistants:` (Optional) This is a list of names of assistants involved with the course. This information will be displayed under the schedule. Leave this empty if there are no assistants.
 2. Update **index.Rmd**
     - Check `title:` and `subtitle:`
     - Check instructions, descriptions and links
 3. Update **schedule.csv**
     - This table holds the schedule information
-    - Open/edit in a spreadsheet or text editor
     - Columns are delimited by `;`
+    - Open/edit in a spreadsheet or text editor. When saving make sure it is still delimited by `;`.
     - Do not change the number of columns, position of columns, column names or date format
     - Rows can be freely added or removed
     - Set date, room, start_time, end_time, topic and person as needed
@@ -62,7 +63,7 @@ If this repo is updated for a different date and location, this is minimum chang
     - *assistant* is optional for listing TAs
     - *link_slide*: (Optional) Link to the presentation. Local links can be like `slide_topic.html`. Use this labelling convention.  
     - *link_lab*: (Optional) Link to the lab material. Local links can be like `lab_topic.html`. This is the labelling convention used.  
-    - *link_room*: (Optional) Link to the room location. Can be a google map link, mazemap link etc. External links must start with `http://`
+    - *link_room*: (Optional) Link to the room location. Can be a google map link, mazemap link etc. Or perhaps a zoom link. External links must start with `http://`
 4. Optionally update **home_schedule.Rmd**
 5. Optionally update **home_precourse.Rmd** with instructions are needed
     - R packages for students to install are shown here
@@ -83,9 +84,9 @@ If the contents are also updated, further changes are required.
 8. Update or create new **lab_** Rmd or md files
     - Lab material
     - Can be Rmd or md
-    - Simple YAML header with `title`, and/or `subtitle` `author` is sufficient
+    - Simple YAML header with `title`, and/or `subtitle`, `author` is sufficient
     - If table-of-contents is to be hidden, the YAML must be modified. See formatting tips below.
-    - External data can be added to the folders **data**
+    - External data can be added to the folder **data**
     - Do not create .md and .Rmd files with same name as they both get converted to .html files
 
 > The `assets` directory contains css styles, headers, footers, logos etc. If you are using images in your .Rmd file, place them in the directory `data/topic` and refer to them using relative path like `![](./data/topic/image.jpg)`. Images generated in R during rendering of the .Rmd file is automatically handled. If you have data (tsv, csv, txt text files, .Rds files), place them inside the directory `data/topic` and read them using relative path `x <- read.delim("./data/topic/table.txt")`. Do not use paths that link outside of the project environment.
@@ -104,6 +105,7 @@ If a new workshop repo is created using this template, the following changes als
 12. Add a personal access token under repo *Settings > Secrets* and name it `TOKEN`
 13. Change repo and badge links in **README.md**
 14. Change `href` in **`_site.yml`**
+15. Change pages and content as needed.
 
 ### Push changes
 
@@ -115,7 +117,7 @@ git commit -m "Updated contents for Mar 2019 Uppsala"
 git push origin
 ```
 
-Once the source files are pushed to GitHub, it is automatically rendered to the branch gh-pages and website is visible at `org.github.io/repo/`. Details are further described below. For local rendering see below.
+Once the source files are pushed to GitHub, it is automatically rendered to the branch gh-pages and website is visible at `user.github.io/repo/`. Details are further described below. For local rendering see below.
 
 ### Formatting tips
 
@@ -137,7 +139,7 @@ output:
     number_sections: false
 ```
 
-- To enable accordion tabs (for hidden answers), block titles and fontawesome, you need to add this bit AFTER the YAML.
+- To enable accordion tabs (for hidden answers), block titles and fontawesome, you need to add this code AFTER the YAML in the `lab_` Rmd file.
 
 ````
 ```{r,child="assets/header-lab.Rmd"}
