@@ -168,11 +168,13 @@ When the committed changes are pushed to GitHub, GitHub actions automatically ru
 
 The rendered html files, dependencies assets, data and other files are all moved into the output directory specified under `output_dir` in `_site.yml`. The details of `rmarkdown::render_site()` is described below. When the rendering is completed, the gh-pages branch is pulled down to a folder named `tmprepo`. The existence of `output_dir` in `tmprepo` is checked. If already present, it is deleted. The `output_dir` folder is copied into `tmprepo`. Lastly, a list of all folders inside `tmprepo` is added to an index file called `index.md`. This will serve as the root of gh-pages. Finally, all files are added and committed to git and pushed to the gh-pages branch. Git has permission to push to gh-pages due to GitHub repo environment variable `TOKEN`.
 
- The first GitHub build can take around 30-45 mins depending on the number of R packages. Subsequent builds take about 2 minutes since caching is enabled. Caches are removed after 7 days of last access. A push after that will require a full rebuild.
+The first GitHub build can take around 30-45 mins depending on the number of R packages. Subsequent builds take about 2 minutes since caching is enabled. Caches are removed after 7 days of last access. A push after that will require a full rebuild.
 
 ### render_site() function
 
 This function uses the information inside the config file `_site.yml`. The top navigation menu is described here. The default output style for all Rmd/md documents are specified under `output:`. Note that this described custom CSS style from `assets/labs.css` and custom footer from `assets/footer-lab.html`. If `output:` is specified within individual Rmd files, it overrides the default in `_site.yml`. The rendered output will automatically be moved to location specified under `output_dir`.
+
+**Known issue**: Note that when rendering **slide** Rmd files locally using `render()`, the output is messed up. This is because it takes output and report style formatting from `_site.yml` when it should use it's own slide style definition from YAML. For now, either use `render_site()` or rename the `_site.yml` temporarily.
 
 ---
 
