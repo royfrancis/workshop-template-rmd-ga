@@ -6,6 +6,8 @@ output:
     number_sections: false
 ---
 
+<br>
+
 ```{r,child="assets/header-lab.Rmd"}
 ```
 
