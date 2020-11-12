@@ -418,6 +418,39 @@ blockquote {
   text-indent: 10px;
 }
 
+/* change colours for blockquote and links inside boxy */
+.boxy-orange > a {
+  color: #bf6300;
+}
+.boxy-success > a {
+  color: #3c763d;
+}
+.boxy-warning > a {
+  color: #8a6d3b;
+}
+.boxy-danger > a {
+  color: #a94442;
+}
+.boxy-info > a {
+  color: #31708f;
+}
+
+.boxy-orange > blockquote {
+  border-left-color: #bf6300;
+}
+.boxy-success > blockquote {
+  border-left-color: #3c763d;
+}
+.boxy-warning > blockquote{
+  border-left-color: #8a6d3b;
+}
+.boxy-danger > blockquote {
+  border-left-color: #a94442;
+}
+.boxy-info > blockquote {
+  border-left-color: #31708f;
+}
+
 /* IMAGES ------------------------------------------------------------------- */
 
 /* image styling */
