@@ -1,0 +1,27 @@
+ 
+ BiocManager
+ DT
+ biomaRt
+ bookdown
+ captioner
+ dplyr
+ dygraphs
+ formattable
+ ggiraph
+ ggplot2
+ highcharter
+ kableExtra
+ knitr
+ leaflet
+ lubridate
+ markdown
+ networkD3
+ pagedown
+ plotly
+ remotes
+ rmarkdown
+ rstudio/fontawesome
+ stringr
+ tidyr
+ xaringan
+ yaml
