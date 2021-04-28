@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i|Ubuntu+Mono&display=swap&subset=latin-ext');
 
 :root {
-  --color-primary: #4C979F;
-  --color-primary-light: #c9dfe2;
-  --color-primary-lighter: #edf4f5;
-  --color-primary-dark: #3c787f;
+  --color-primary: #95b540;
+  --color-primary-light: #E9F2D1;
+  --color-primary-lighter: #f6f9ec;
+  --color-primary-dark: #96b43f;
   --color-border: #ccc;
   --color-text: #424949;
   --color-code-bg:  #f4f6f6;
@@ -164,8 +164,8 @@ blockquote {
 /* div styles --------------------------------------------------------------- */
 
 /** div style for instructions **/
+
 .boxy {
- /*border: 1px solid var(--color-primary);*/
  color: var(--color-primary-dark);
  background-color: var(--color-primary-lighter);
  border: 1px solid var(--color-primary-light);
