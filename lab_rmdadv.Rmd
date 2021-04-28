@@ -150,14 +150,14 @@ Add colours to boxes.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-primary">
+<div class="boxy boxy-grey">
 This is some instruction.
 </div>
 ```
 </div>
 
 <div class="pull-right-50">
-<div class="boxy boxy-primary">
+<div class="boxy boxy-grey">
 This is some instruction.
 </div>
 </div>
@@ -259,14 +259,14 @@ Icons can be added to the boxes using pre-defined classes.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-primary boxy-lightbulb">
+<div class="boxy boxy-grey boxy-lightbulb">
 **Tip:** This is some instruction.
 </div>
 ```
 </div>
 
 <div class="pull-right-50">
-<div class="boxy boxy-primary boxy-lightbulb">
+<div class="boxy boxy-grey boxy-lightbulb">
 **Tip:** This is some instruction.
 </div>
 </div>
@@ -524,7 +524,7 @@ sum(x)
 If the accordion block is to contain regular text and code block, then the raw HTML code needs to be used. Below is an example.
 
 ````markdown
-<div class="boxy boxy-clipboard-list boxy-primary">
+<div class="boxy boxy-clipboard-list">
 
 **Challenge**
 
@@ -551,7 +551,7 @@ typeof(x[3])
 
 The above code creates the block below. Note that the variable `task-vectors` (used in 3 positions above) needs to changed to a unique value for each such block in a document. The code above renders as shown below.
 
-<div class="boxy boxy-clipboard-list boxy-primary">
+<div class="boxy boxy-clipboard-list">
 
 **Challenge**
 
