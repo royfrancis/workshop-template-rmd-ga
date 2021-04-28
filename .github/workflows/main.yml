@@ -88,7 +88,7 @@ jobs:
           echo "Folder contents at ${path_repo}/${path_export}:"
           ls -lh ${path_repo}/${path_export}
 
-          # Clone gh-pages branch
+          # Clone gh-pages branch and remove old directories with same name
           git clone --single-branch --branch gh-pages "https://${{ secrets.TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" tmprepo
           cd tmprepo
           if [ -d $path_export ]; then

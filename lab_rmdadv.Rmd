@@ -13,7 +13,7 @@ Here are some advanced usage of markdown, Rmarkdown and HTML.
 
 Raw HTML can be used to organise content into custom layout.
 
-Use `<div>content</div>` for block content and `<span>content</span>` for inline content. 
+Use `<div>content</div>` for block content and `<span>content</span>` for inline content.
 
 For example, here are two blocks:
 
@@ -488,7 +488,7 @@ Sys.Date()
 
 ### Inside custom div
 
-Here are examples of accordions inside custom divs.
+Here are examples of accordions inside custom divs. Accordion buttons automatically take the colour of the parent boxy.
 
 <div class="boxy boxy-clipboard-list">
 **Challenge**  
@@ -510,7 +510,7 @@ typeof(x[3])
 
 Compute mean of a vector `4,20,NA,6`. What is the expected results?
 
-```{r,accordion=TRUE,btn.type="optional"}
+```{r,accordion=TRUE}
 x <-c(4,20,NA,6)
 sum(x)
 ```
@@ -531,7 +531,7 @@ If the accordion block is to contain regular text and code block, then the raw H
 If I create a vector as follows `x <-c(5,3,9,"6")`, what is the "type" of the element in the third position? Is it a number?
 
 <p>
-<button class="btn btn-sm btn-primary btn-collapse btn-collapse-normal collapsed" type="button" data-toggle="collapse" data-target="#task-vectors" aria-expanded="false" aria-controls="task-vectors">
+<button class="btn btn-sm btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#task-vectors" aria-expanded="false" aria-controls="task-vectors">
 </button>
 </p>
 <div class="collapse" id="task-vectors">
@@ -558,7 +558,7 @@ The above code creates the block below. Note that the variable `task-vectors` (u
 If I create a vector as follows `x <-c(5,3,9,"6")`, what is the "type" of the element in the third position? Is it a number?
 
 <p>
-<button class="btn btn-sm btn-primary btn-collapse btn-collapse-normal collapsed" type="button" data-toggle="collapse" data-target="#task-vectors" aria-expanded="false" aria-controls="task-vectors">
+<button class="btn btn-sm btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#task-vectors" aria-expanded="false" aria-controls="task-vectors">
 </button>
 </p>
 <div class="collapse" id="task-vectors">
@@ -586,7 +586,7 @@ Here is another example.
 Compute mean of a vector `4,20,NA,6`. What is the expected results?
 
 <p>
-<button class="btn btn-sm btn-collapse-optional btn-collapse btn-collapse-normal collapsed" type="button" data-toggle="collapse" data-target="#task-sum" aria-expanded="false" aria-controls="task-sum">
+<button class="btn btn-sm btn-collapse-optional btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#task-sum" aria-expanded="false" aria-controls="task-sum">
 </button>
 </p>
 <div class="collapse" id="task-sum">
@@ -610,7 +610,7 @@ sum(x)
 Compute mean of a vector `4,20,NA,6`. What is the expected results?
 
 <p>
-<button class="btn btn-sm btn-collapse-optional btn-collapse btn-collapse-normal collapsed" type="button" data-toggle="collapse" data-target="#task-sum" aria-expanded="false" aria-controls="task-sum">
+<button class="btn btn-sm btn-collapse-optional btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#task-sum" aria-expanded="false" aria-controls="task-sum">
 </button>
 </p>
 <div class="collapse" id="task-sum">

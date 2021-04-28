@@ -419,35 +419,28 @@ blockquote {
 }
 
 /* change colours for blockquote and links inside boxy */
-.boxy-orange > a {
-  color: #bf6300;
-}
-.boxy-success > a {
-  color: #3c763d;
-}
-.boxy-warning > a {
-  color: #8a6d3b;
-}
-.boxy-danger > a {
-  color: #a94442;
-}
-.boxy-info > a {
-  color: #31708f;
+.boxy a {
+  color: var(--color-text);
 }
 
-.boxy-orange > blockquote {
+.boxy a:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+.boxy-orange blockquote {
   border-left-color: #bf6300;
 }
-.boxy-success > blockquote {
+.boxy-success blockquote {
   border-left-color: #3c763d;
 }
-.boxy-warning > blockquote{
+.boxy-warning blockquote{
   border-left-color: #8a6d3b;
 }
-.boxy-danger > blockquote {
+.boxy-danger blockquote {
   border-left-color: #a94442;
 }
-.boxy-info > blockquote {
+.boxy-info blockquote {
   border-left-color: #31708f;
 }
 
@@ -545,20 +538,18 @@ button.btn {
  width: 35px;
 }
 
+/* accordion buttons by themselves or inside boxy-primary by default take primary colour */
 button.btn-collapse {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   letter-spacing: 1px;
   margin-bottom: 5px;
-}
-
-button.btn-collapse-normal {
   color: white;
   border-color: var(--color-primary);
   background-color: var(--color-primary);
 }
 
-button.btn-collapse-normal:hover {
+button.btn-collapse:hover, button.btn-collapse:active, button.btn-collapse:focus {
     background-color: white;
     color: var(--color-primary);
     border-color: white;
@@ -567,13 +558,50 @@ button.btn-collapse-normal:hover {
     -moz-box-shadow: 0px 3px 40px -9px var(--color-primary);
 }
 
-button.btn-collapse-optional {
+/* accordion buttons inside default boxy by default take grey colour */
+.boxy button.btn-collapse {
+  color: white;
+  border-color: var(--color-border);
+  background-color: var(--color-border);
+}
+
+.boxy button.btn-collapse:hover {
+    background-color: white;
+    color: var(--color-border);
+    border-color: white;
+    box-shadow: 0px 3px 30px -9px var(--color-border);
+    -webkit-box-shadow: 0px 3px 30px -9px var(--color-border);
+    -moz-box-shadow: 0px 3px 30px -9px var(--color-border);
+}
+
+/* accordion buttons inside boxy-primary by default takes primary colour */
+.boxy-primary button.btn-collapse {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: white;
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
+
+.boxy-primary button.btn-collapse:hover, .boxy-primary button.btn-collapse:active, .boxy-primary button.btn-collapse:focus {
+    background-color: white;
+    color: var(--color-primary);
+    border-color: white;
+    box-shadow: 0px 3px 40px -9px var(--color-primary);
+    -webkit-box-shadow: 0px 3px 40px -9px var(--color-primary);
+    -moz-box-shadow: 0px 3px 40px -9px var(--color-primary);
+}
+
+/* accordion buttons inside boxy-orange by default takes orange colour */
+.boxy-orange button.btn-collapse, button.btn-collapse-optional {
   color: white;
   border-color: var(--color-optional);
   background-color: var(--color-optional);
 }
 
-button.btn-collapse-optional:hover {
+.boxy-orange button.btn-collapse:hover, button.btn-collapse-optional:hover {
     background-color: white;
     color: var(--color-optional);
     border-color: white;
@@ -582,13 +610,14 @@ button.btn-collapse-optional:hover {
     -moz-box-shadow: 0px 3px 30px -9px var(--color-optional);
 }
 
-button.btn-collapse-warning {
+/* accordion buttons inside boxy-warning by default takes yellow colour */
+.boxy-warning button.btn-collapse, button.btn-collapse-warning {
   color: white;
   border-color: #8a6d3b;
   background-color: #8a6d3b;
 }
 
-button.btn-collapse-warning:hover {
+.boxy-warning button.btn-collapse:hover, button.btn-collapse-warning:hover {
     background-color: white;
     color: #8a6d3b;
     border-color: white;
@@ -597,13 +626,14 @@ button.btn-collapse-warning:hover {
     -moz-box-shadow: 0px 3px 30px -9px #8a6d3b;
 }
 
-button.btn-collapse-success {
+/* accordion buttons inside boxy-success by default takes green colour */
+.boxy-success button.btn-collapse, button.btn-collapse-success {
   color: white;
   border-color: #3c763d;
   background-color: #3c763d;
 }
 
-button.btn-collapse-success:hover {
+.boxy-success button.btn-collapse:hover, button.btn-collapse-success:hover {
     background-color: white;
     color: #3c763d;
     border-color: white;
@@ -612,13 +642,14 @@ button.btn-collapse-success:hover {
     -moz-box-shadow: 0px 3px 30px -9px #3c763d;
 }
 
-button.btn-collapse-danger {
+/* accordion buttons inside boxy-danger by default takes red colour */
+.boxy-danger button.btn-collapse, button.btn-collapse-danger {
   color: white;
   border-color: #a94442;
   background-color: #a94442;
 }
 
-button.btn-collapse-danger:hover {
+.boxy-danger button.btn-collapse:hover, button.btn-collapse-danger:hover {
     background-color: white;
     color: #a94442;
     border-color: white;
@@ -627,13 +658,15 @@ button.btn-collapse-danger:hover {
     -moz-box-shadow: 0px 3px 30px -9px #a94442;
 }
 
-button.btn-collapse-info {
+/* accordion buttons inside boxy-info by default takes blue colour */
+
+.boxy-info button.btn-collapse, button.btn-collapse-info {
   color: white;
   border-color: #31708f;
   background-color: #31708f;
 }
 
-button.btn-collapse-info:hover {
+.boxy-info button.btn-collapse:hover, button.btn-collapse-info:hover {
     background-color: white;
     color: #31708f;
     border-color: white;
@@ -755,7 +788,7 @@ ul.nav a:hover {
 
 .footer a:hover {
   /*color: lightgrey;*/
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* homepage -------------------------------------------------------------------- */
