@@ -2,7 +2,7 @@
 title: "Title of the topic"
 subtitle: "Workshop on Topic"
 author: "`r paste0('<b>Doe Jones</b> • ',format(Sys.time(), '%d-%b-%Y'))`"
-institute: NBIS, SciLifeLab
+institute: NBIS
 keywords: bioinformatics, course, workshop, scilifelab, nbis
 output:
   xaringan::moon_reader:
@@ -43,9 +43,15 @@ class: spaced
 * [Section 2](#section2)
 * [Section 3](#section3)
 
+---
+name: section1
+
 ## Section 1
 
 This is some text here.
+
+---
+name: section2
 
 ## Section 2
 
@@ -58,15 +64,14 @@ if(sad==TRUE) {
 }
 ```
 
-## Section 3
+---
+name: section3
 
-More content here
+## Section 3
 
 ```{r}
 head(iris)
 ```
-
-<!-- --------------------- Do not edit this and below --------------------- -->
 
 ---
 
@@ -74,6 +79,8 @@ head(iris)
 
 * [Tutorial 1](link-to-tutorial)
 * [Tutorial 2](link-to-tutorial)
+
+<!-- --------------------- Do not edit this and below --------------------- -->
 
 ---
 name: end_slide
