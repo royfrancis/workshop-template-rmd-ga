@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link id="font-awesome-1-attachment" rel="attachment" href="site_libs/font-awesome-5.1.0/fonts/fontawesome-webfont.ttf"/>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="assets/lab.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<!-- rmd lab header -->
+<p><br></p>
+<div id="precourse" class="section level1 tabset tabset-fade">
+<h1>Precourse</h1>
+<p>This workshop is aimed towards biologists, researchers, computer scientists or data analysts planning to run, analyse and interpret an RNA-Seq experiment. Basic knowledge of working on the Unix/Linux command line is expected.</p>
+<div id="preparation" class="section level2">
+<h2>Preparation</h2>
+<p>These are steps to be completed before the workshop.</p>
+<div id="uppmax-id" class="section level3">
+<h3>Uppmax ID</h3>
+<p>A remote computing cluster (UPPMAX) will be use for data analyses. A SUPR/SNIC account is needed to use UPPMAX resources.</p>
+<p>If you do not already have one, create an account at <a href="https://supr.snic.se/" target="_blank">https://supr.snic.se/</a>.</p>
+<p><img src="data/common/supr-login.png" class="fancyimage"></p>
+</div>
+<div id="ssh-sftp-access" class="section level3">
+<h3>SSH &amp; SFTP access</h3>
+<div class="boxy boxy-grey boxy-lightbulb">
+<p>You need a program to connect to a remote cluster (UPPMAX). Linux and Mac users already have terminal on their systems.</p>
+<p><a href="http://mobaxterm.mobatek.net" target="_blank"><img src="data/common/mobaxterm.png" /></a></p>
+<p>If you are on a Windows system, we recommend <a href="http://mobaxterm.mobatek.net" target="_blank">MobaXterm</a>. It is recommended that you INSTALL the program and not use the portable version. MobaXterm also has an integrated SFTP file browser.</p>
+<p><a href="https://www.xquartz.org/" target="_blank"><img src="data/common/xquartz.png" /></a></p>
+<p>Mac users will need to download and install <a href="https://www.xquartz.org/" target="_blank">XQuartz</a> for X11 forwarding. <em>ie</em>; to forward remotely opened windows to local machine.</p>
+</div>
+<p>Type <code>ssh -Y user@rackham.uppmax.uu.se</code> in the terminal and then enter your password. The password will not be visible as you type.</p>
+<div class="boxy boxy-grey boxy-lightbulb">
+<p>If you need to transfer data between UPPMAX and your computer, you can use tools SCP or SFTP through the terminal. Windows users can use the SFTP browser available with MobaXterm.</p>
+<p><a href="https://filezilla-project.org/" target="_blank"><img src="data/common/filezilla.png" /></a></p>
+<p>For all users, if you prefer a GUI to upload and download files from UPPMAX, we recommend installing <a href="https://filezilla-project.org/" target="_blank">FileZilla</a>.</p>
+</div>
+</div>
+<div id="tools" class="section level3">
+<h3>Tools</h3>
+<p><a href="https://cloud.r-project.org/" target="_blank"><img src="data/common/r.png" /></a></p>
+<p><i class="fas fa-chevron-circle-right"></i> <strong>Install R statistical software</strong> from <a href="https://cloud.r-project.org/" target="_blank">r-project.org</a>. If you have an old version of R and you do not use it, uninstall it and then install a newer version. Make sure you have one of the recent versions of R. One version older than the latest version is recommended. This is because all packages may not be updated for the very latest version of R. For Windows users, it is recommended that you DO NOT install to <code>C:\Program Files\R\</code>. Instead, install to <code>C:\R\</code>.</p>
+<p><a href="https://www.rstudio.com/products/rstudio/download/" target="_blank"><img src="data/common/rstudio.png" /></a></p>
+<p><i class="fas fa-chevron-circle-right"></i> <strong>Install <a href="https://www.rstudio.com/products/rstudio/download/" target="_blank">RStudio</a></strong>. RStudio provides you with tools like code editor with highlighting, project management, version control, package building, debugger, profiler and more.</p>
+<p><i class="fas fa-chevron-circle-right"></i> <strong>Extra R packages</strong> used in the workshop exercises (if any) are listed below. It is recommended that you install this in advance.</p>
+<p>For Linux and Mac users, you may have to install some extra OS specific libraries before installing the R packages. Pick the packages as needed based on your system below.</p>
+<p>libcurl</p>
+<blockquote>
+<ul>
+<li>deb: libcurl4-openssl-dev (Debian, Ubuntu, etc)</li>
+<li>rpm: libcurl-devel (Fedora, CentOS, RHEL)</li>
+<li>csw: libcurl_dev (Solaris)</li>
+</ul>
+</blockquote>
+<p>libssl</p>
+<blockquote>
+<ul>
+<li>deb: libssl-dev (Debian, Ubuntu, etc)</li>
+<li>rpm: openssl-devel (Fedora, CentOS, RHEL)</li>
+<li>csw: libssl_dev (Solaris)</li>
+<li>brew: <a href="mailto:openssl@1.1" class="email">openssl@1.1</a> (Mac OSX)</li>
+</ul>
+</blockquote>
+<p>libxml2</p>
+<blockquote>
+<ul>
+<li>deb: libxml2-dev (Debian, Ubuntu, etc)</li>
+<li>rpm: libxml2-devel (Fedora, CentOS, RHEL)</li>
+<li>csw: libxml2_dev (Solaris)</li>
+</ul>
+</blockquote>
+<p>Install the R packages. Simply copy and paste the code into R.</p>
+<pre class="r"><code># install from cran
+install.packages(c(&#39;BiocManager&#39;,&#39;remotes&#39;,&#39;dplyr&#39;,&#39;ggplot2&#39;,&#39;stringr&#39;,&#39;tidyr&#39;))
+# install from bioconductor
+BiocManager::install(c(&#39;biomaRt&#39;))</code></pre>
+<hr />
+</div>
+</div>
+<div id="syllabus" class="section level2">
+<h2>Syllabus</h2>
+<p>The syllabus for this workshop are as follows.</p>
+<p>[To be added]</p>
+<hr />
+</div>
+<div id="learning-outcomes" class="section level2">
+<h2>Learning outcomes</h2>
+<p>[To be added]</p>
+<hr />
+</div>
+</div>
+<div id="section" class="section level1">
+<h1></h1>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
