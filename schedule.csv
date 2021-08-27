@@ -1,17 +1,17 @@
 date;room;start_time;end_time;topic;teacher;assistant;link_slide;link_lab;link_room
-13/05/2019;E10:1309;09:00;10:00;Welcome;Person A;Person K;slide_sample.html;;http://bit.ly/2UKjEoQ
+13/05/2019;E10:1309;09:00;10:00;Welcome;Person A;JD;slide_sample.html;;http://bit.ly/2UKjEoQ
 ;;10:00;11:00;Markdown;Person A;;;lab_md.html;
-;;11:00;12:00;Rmarkdown;Person A;Person K;;lab_rmd.html;
+;;11:00;12:00;Rmarkdown;Person A;MS;;lab_rmd.html;
 ;;12:00;13:00;Lunch;;;;;
 ;;13:00;14:00;Advanced Rmd;Person A;;;lab_rmdadv.html;
 ;;14:00;16:00;This a looooooooooooooong topic title;Person A;;;;
-;;16:00;17:00;Topic D;Person A;;slide_uppmax.pdf;;
+;;16:00;17:00;Topic D;Person A;;slide_sample.pdf;;
 14/05/2019;E10:1309;09:00;10:00;Topic;Person B;;;;
-;;10:00;11:00;Topic;Person B;Person K, Person L;;;
+;;10:00;11:00;Topic;Person B;JD, MS;;;
 ;;11:00;12:00;Lunch;;;;;
 ;;12:00;13:00;Topic;Person B;;;;
 ;;13:00;14:00;Topic;Person B;;;;
-;;14:00;17:00;Topic;Person B;Person K, Person L;;;
+;;14:00;17:00;Topic;Person B;DR, MS;;;
 15/05/2019;E10:1309;09:00;10:00;Topic;Person C;;;;
 ;;10:00;11:00;Topic;Person C;;;;
 ;;11:00;12:00;Topic;Person C;;;;
