@@ -36,7 +36,7 @@ Fork/clone the repository. Only work in the master branch.
 
 ### Rerun a workshop
 
-If this repo is updated for a different date and location, this is minimum changes required.
+When the same course is run with same contents, but a different date and location, these are the minimum changes required.
 
 1. Update **`_site.yml`**
     - **Set argument `output_dir:` to a year-month (YYMM) combination like 1908**. This is important and the first thing to do, so that output from old courses are not overwritten.
@@ -73,7 +73,7 @@ If this repo is updated for a different date and location, this is minimum chang
 
 ### Modify contents
 
-If the contents are also updated, further changes are required.
+If course content is updated, further changes are required.
 
 7. Update or create new **slide_** files
     - Presentation material
@@ -102,10 +102,11 @@ If the contents are also updated, further changes are required.
 
 If a new workshop repo is created using this template, the following changes also apply.
 
-12. Add a personal access token under repo *Settings > Secrets* and name it `TOKEN`
-13. Change repo and badge links in **README.md**
-14. Change `href` in **`_site.yml`**
-15. Change pages and content as needed.
+12. Add a personal access token under repo *Settings > Secrets* and name it `TOKEN`. This needs the following permissions: *admin:repo_hook, repo, workflow, write:packages*. This token is used for pushing/pulling to the GitHub repository.
+13. Add a personal access token under repo *Settings > Secrets* and name it `PAT`. This needs no permissions. This token is used when installing R packages from GitHub.
+14. Change repo and badge links in **README.md**
+15. Change `href` in **`_site.yml`**
+16. Change pages and content as needed.
 
 ### Push changes
 
@@ -148,7 +149,7 @@ output:
 
 ## Local rendering
 
-For local rendering, you need to have R installed on your system. R dependencies listed in `site.yml` under **packages_cran_repo** and **packages_bioc_repo** need to be installed. And then any R packages pertaining to your particular Rmd file(s) (if needed) must be installed.
+For local rendering, you need to have R installed on your system. R dependencies listed in `site.yml` under **packages_cran_repo**, **packages_bioc_repo** and **packages_github_repo** need to be installed. And then any R packages pertaining to your particular Rmd file(s) (if needed) must be installed.
 
 Run `rmarkdown::render_site()` in the project directory. This renders all Rmd and md files to generate the HTML files and all other necessary files (including the assets, images and data directories) and moves them into a directory specified under `output_dir` in **`_site.yml`**. Open `output_dir/index.html` to start. Remove this directory after use. **DO NOT** commit and push this output directory to GitHub.
 
@@ -164,11 +165,11 @@ The source content is maintained in the master branch. The source gets a new com
 
 ### GitHub Actions
 
-When the committed changes are pushed to GitHub, GitHub actions automatically runs to render the output. The `.github/workflows/main.yml` contains the workflow that runs to render the site. The script builds a linux container where R and necessary linux dependencies are installed. Then the R packages described under **packages_cran_repo** and **packages_bioc_repo** in `_site,yml` are installed. When completed, the R function `rmarkdown::render_site()` is executed to build the website.
+When the committed changes are pushed to GitHub, GitHub actions automatically runs to render the output. The `.github/workflows/main.yml` contains the workflow that runs to render the site. The script builds a linux container where R and necessary linux dependencies are installed. Then the R packages described under **packages_cran_x**, **packages_bioc_x** and **packages_github_x** in `_site,yml` are installed. When completed, the R function `rmarkdown::render_site()` is executed to build the website.
 
 The rendered html files, dependencies assets, data and other files are all moved into the output directory specified under `output_dir` in `_site.yml`. The details of `rmarkdown::render_site()` is described below. When the rendering is completed, the gh-pages branch is pulled down to a folder named `tmprepo`. The existence of `output_dir` in `tmprepo` is checked. If already present, it is deleted. The `output_dir` folder is copied into `tmprepo`. Lastly, a list of all folders inside `tmprepo` is added to an index file called `index.md`. This will serve as the root of gh-pages. Finally, all files are added and committed to git and pushed to the gh-pages branch. Git has permission to push to gh-pages due to GitHub repo environment variable `TOKEN`.
 
-The first GitHub build can take around 30-45 mins depending on the number of R packages. Subsequent builds take about 2 minutes since caching is enabled. Caches are removed after 7 days of last access. A push after that will require a full rebuild.
+The first GitHub build can take around 30 mins or more depending on the number of R packages. Subsequent builds take about 2 minutes since caching is enabled. Caches are removed after 7 days of last access. A push after that will require a full rebuild.
 
 ### render_site() function
 
@@ -178,4 +179,4 @@ This function uses the information inside the config file `_site.yml`. The top n
 
 ---
 
-**2020** NBIS • SciLifeLab
+**2021** • Roy Francis
