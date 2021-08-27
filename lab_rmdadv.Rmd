@@ -93,9 +93,40 @@ Nested right.
 
 <br>
 
+# Alerts
+
+<div class="alert alert-success">
+  **Note:** This is a success alert!
+</div>
+<div class="alert alert-danger">
+  **Note:** This is a danger alert!
+</div>
+<div class="alert alert-warning">
+  **Note:** This is a warning alert!
+</div>
+<div class="alert alert-info">
+  **Note:** This is a info alert!
+</div>
+
+
+```
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  This is a danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  This is a warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  This is a info alert—check it out!
+</div>
+```
+
 # Extras
 
-These are features implemented in this workshop material.
+These are features implemented in this workshop template and not available in standard Rmarkdown.
 
 ## Icons
 
@@ -181,13 +212,13 @@ This is some instruction.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-success">
+<div class="boxy boxy-green">
 This is some instruction.
 </div>
 ```
 </div>
 <div class="pull-right-50">
-<div class="boxy boxy-success">
+<div class="boxy boxy-green">
 This is some instruction.
 </div>
 </div>
@@ -196,13 +227,13 @@ This is some instruction.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-warning">
+<div class="boxy boxy-yellow">
 This is some instruction.
 </div>
 ```
 </div>
 <div class="pull-right-50">
-<div class="boxy boxy-warning">
+<div class="boxy boxy-yellow">
 This is some instruction.
 </div>
 </div>
@@ -211,13 +242,13 @@ This is some instruction.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-danger">
+<div class="boxy boxy-red">
 This is some instruction.
 </div>
 ```
 </div>
 <div class="pull-right-50">
-<div class="boxy boxy-danger">
+<div class="boxy boxy-red">
 This is some instruction.
 </div>
 </div>
@@ -226,13 +257,13 @@ This is some instruction.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-info">
+<div class="boxy boxy-blue">
 This is some instruction.
 </div>
 ```
 </div>
 <div class="pull-right-50">
-<div class="boxy boxy-info">
+<div class="boxy boxy-blue">
 This is some instruction.
 </div>
 </div>
@@ -290,13 +321,13 @@ Icons can be added to the boxes using pre-defined classes.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-success boxy-check">
+<div class="boxy boxy-green boxy-check">
 **Success:** This is some instruction.
 </div>
 ```
 </div>
 <div class="pull-right-50">
-<div class="boxy boxy-success boxy-check">
+<div class="boxy boxy-green boxy-check">
 **Success:**This is some instruction.
 </div>
 </div>
@@ -305,13 +336,13 @@ Icons can be added to the boxes using pre-defined classes.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-warning boxy-clipboard-list">
+<div class="boxy boxy-yellow boxy-clipboard-list">
 **Task:** This is some instruction.
 </div>
 ```
 </div>
 <div class="pull-right-50">
-<div class="boxy boxy-warning boxy-clipboard-list">
+<div class="boxy boxy-yellow boxy-clipboard-list">
 **Task:** This is some instruction.
 </div>
 </div>
@@ -320,13 +351,13 @@ Icons can be added to the boxes using pre-defined classes.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-danger boxy-times">
+<div class="boxy boxy-red boxy-times">
 **Error:** This is some instruction.
 </div>
 ```
 </div>
 <div class="pull-right-50">
-<div class="boxy boxy-danger boxy-times">
+<div class="boxy boxy-red boxy-times">
 **Error:** This is some instruction.
 </div>
 </div>
@@ -335,50 +366,19 @@ Icons can be added to the boxes using pre-defined classes.
 <div class="container-fluid">
 <div class="pull-left-50">
 ```
-<div class="boxy boxy-info boxy-comments">
+<div class="boxy boxy-blue boxy-comments">
 **Discuss:** This is some instruction.
 </div>
 ```
 </div>
 <div class="pull-right-50">
-<div class="boxy boxy-info boxy-comments">
+<div class="boxy boxy-blue boxy-comments">
 **Discuss:** This is some instruction.
 </div>
 </div>
 </div>
 
 Currently implemented icons for boxes are `boxy-lightbulb` (<i class="fas fa-lightbulb"></i>) for tips, `boxy-exclamation` (<i class="fas fa-exclamation"></i>) for note, `boxy-clipboard-list` (<i class="fas fa-clipboard-list"></i>) for tasks, `boxy-comments` (<i class="fas fa-comments"></i>) for discuss, `boxy-desktop` (<i class="fas fa-desktop"></i>) for desktop/local, `boxy-cloud` (<i class="fas fa-cloud"></i>) for cloud, `boxy-check` (<i class="fas fa-check"></i>) for correct, `boxy-times` (<i class="fas fa-times"></i>) for wrong/false, `boxy-skull` (<i class="fas fa-skull"></i>) for danger.
-
-## Alerts
-
-<div class="alert alert-success">
-  **Note:** This is a success alert!
-</div>
-<div class="alert alert-danger">
-  **Note:** This is a danger alert!
-</div>
-<div class="alert alert-warning">
-  **Note:** This is a warning alert!
-</div>
-<div class="alert alert-info">
-  **Note:** This is a info alert!
-</div>
-
-
-```
-<div class="alert alert-success" role="alert">
-  This is a success alert—check it out!
-</div>
-<div class="alert alert-danger" role="alert">
-  This is a danger alert—check it out!
-</div>
-<div class="alert alert-warning" role="alert">
-  This is a warning alert—check it out!
-</div>
-<div class="alert alert-info" role="alert">
-  This is a info alert—check it out!
-</div>
-```
 
 ## Block title
 
@@ -447,48 +447,188 @@ Sys.Date()
 They can be given custom colours with chunk argument `btn.type`.
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,accordion=TRUE,btn.type='optional'}\n","Sys.Date()\n","``` \n"))
+cat(paste0("```{r,accordion=TRUE,btn.type='orange'}\n","Sys.Date()\n","``` \n"))
 ```
 
-```{r,accordion=TRUE,btn.type="optional"}
+```{r,accordion=TRUE,btn.type="orange"}
 Sys.Date()
 ```
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,accordion=TRUE,btn.type='success'}\n","Sys.Date()\n","``` \n"))
+cat(paste0("```{r,accordion=TRUE,btn.type='green'}\n","Sys.Date()\n","``` \n"))
 ```
 
-```{r,accordion=TRUE,btn.type="success"}
+```{r,accordion=TRUE,btn.type="green"}
 Sys.Date()
 ```
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,accordion=TRUE,btn.type='warning'}\n","Sys.Date()\n","``` \n"))
+cat(paste0("```{r,accordion=TRUE,btn.type='yellow'}\n","Sys.Date()\n","``` \n"))
 ```
 
-```{r,accordion=TRUE,btn.type="warning"}
+```{r,accordion=TRUE,btn.type="yellow"}
 Sys.Date()
 ```
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,accordion=TRUE,btn.type='danger'}\n","Sys.Date()\n","``` \n"))
+cat(paste0("```{r,accordion=TRUE,btn.type='red'}\n","Sys.Date()\n","``` \n"))
 ```
 
-```{r,accordion=TRUE,btn.type="danger"}
+```{r,accordion=TRUE,btn.type="red"}
 Sys.Date()
 ```
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,accordion=TRUE,btn.type='info'}\n","Sys.Date()\n","``` \n"))
+cat(paste0("```{r,accordion=TRUE,btn.type='blue'}\n","Sys.Date()\n","``` \n"))
 ```
 
-```{r,accordion=TRUE,btn.type="info"}
+```{r,accordion=TRUE,btn.type="blue"}
 Sys.Date()
 ```
 
 ### Inside custom div
 
-Here are examples of accordions inside custom divs. Accordion buttons automatically take the colour of the parent boxy.
+Accordion buttons automatically take the colour of the parent boxy.
+
+````markdown
+<div class="boxy boxy-clipboard-list">
+This could be an instruction.
+
+```{r,accordion=TRUE} `r ''`
+Sys.Date()
+```
+
+</div>
+````
+
+<div class="boxy boxy-clipboard-list">
+This could be an instruction.
+
+```{r,accordion=TRUE}
+Sys.Date()
+```
+
+</div>
+
+````markdown
+<div class="boxy boxy-orange boxy-exclamation">
+This could be an instruction.
+
+```{r,accordion=TRUE} `r ''`
+Sys.Date()
+```
+
+</div>
+````
+
+<div class="boxy boxy-orange boxy-exclamation">
+This could be an option.
+
+```{r,accordion=TRUE}
+Sys.Date()
+```
+
+</div>
+
+````markdown
+<div class="boxy boxy-green boxy-check">
+This could be an instruction.
+
+```{r,accordion=TRUE} `r ''`
+Sys.Date()
+```
+
+</div>
+````
+
+<div class="boxy boxy-green boxy-check">
+This could be a success.
+
+```{r,accordion=TRUE}
+Sys.Date()
+```
+
+</div>
+
+````markdown
+<div class="boxy boxy-yellow boxy-exclamation">
+This could be an instruction.
+
+```{r,accordion=TRUE} `r ''`
+Sys.Date()
+```
+
+</div>
+````
+
+<div class="boxy boxy-yellow boxy-exclamation">
+This could be a warning.
+
+```{r,accordion=TRUE}
+Sys.Date()
+```
+
+</div>
+
+````markdown
+<div class="boxy boxy-red boxy-times">
+This could be an instruction.
+
+```{r,accordion=TRUE} `r ''`
+Sys.Date()
+```
+
+</div>
+````
+
+<div class="boxy boxy-red boxy-times">
+This could be bad.
+
+```{r,accordion=TRUE}
+Sys.Date()
+```
+
+</div>
+
+````markdown
+<div class="boxy boxy-blue boxy-lightbulb">
+This could be an instruction.
+
+```{r,accordion=TRUE} `r ''`
+Sys.Date()
+```
+
+</div>
+````
+
+<div class="boxy boxy-blue boxy-lightbulb">
+This could be a tip.
+
+```{r,accordion=TRUE}
+Sys.Date()
+```
+
+</div>
+
+#### Examples
+
+Here are more examples of accordions inside custom divs. 
+
+````markdown
+<div class="boxy boxy-clipboard-list">
+**Challenge**  
+
+If I create a vector as follows `x <-c(5,3,9,"6")`, what is the "type" of the element in the third position? Is it a number?
+
+```{r,accordion=TRUE} `r ''`
+x <-c(5,3,9,"6")
+typeof(x[3])
+```
+
+<i class="fas fa-lightbulb"></i> The third position is not a number, it's a character. In fact, all elements in this vector are characters. If there is a character in a numeric vector, all elements are converted to characters (`typeof(x)`).
+
+</div>
+````
 
 <div class="boxy boxy-clipboard-list">
 **Challenge**  
@@ -504,11 +644,30 @@ typeof(x[3])
 
 </div>
 
+This is another example.
+
+````markdown
 <div class="boxy boxy-clipboard-list boxy-orange">
 **Optional**
 
 
-Compute mean of a vector `4,20,NA,6`. What is the expected results?
+Compute mean of a vector `4,20,NA,6`. What is the expected result?
+
+```{r,accordion=TRUE} `r ''`
+x <-c(4,20,NA,6)
+sum(x)
+```
+
+<i class="fas fa-lightbulb"></i> To calculate sum without the NA, set `na.rm=TRUE`.
+
+</div>
+````
+
+<div class="boxy boxy-clipboard-list boxy-orange">
+**Optional**
+
+
+Compute mean of a vector `4,20,NA,6`. What is the expected result?
 
 ```{r,accordion=TRUE}
 x <-c(4,20,NA,6)
@@ -537,7 +696,7 @@ If I create a vector as follows `x <-c(5,3,9,"6")`, what is the "type" of the el
 <div class="collapse" id="task-vectors">
 <div class="card card-body">
 
-```{r}
+```{r} `r ''`
 x <-c(5,3,9,"6")
 typeof(x[3])
 ```
@@ -583,16 +742,16 @@ Here is another example.
 <div class="boxy boxy-clipboard-list boxy-orange">
 **Optional**
 
-Compute mean of a vector `4,20,NA,6`. What is the expected results?
+Compute mean of a vector `4,20,NA,6`. What is the expected result?
 
 <p>
-<button class="btn btn-sm btn-collapse-optional btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#task-sum" aria-expanded="false" aria-controls="task-sum">
+<button class="btn btn-sm btn-collapse-orange btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#task-sum" aria-expanded="false" aria-controls="task-sum">
 </button>
 </p>
 <div class="collapse" id="task-sum">
 <div class="card card-body">
 
-```{r}
+```{r} `r ''`
 x <-c(4,20,NA,6)
 sum(x)
 ```
@@ -607,10 +766,10 @@ sum(x)
 <div class="boxy boxy-clipboard-list boxy-orange">
 **Optional**
 
-Compute mean of a vector `4,20,NA,6`. What is the expected results?
+Compute mean of a vector `4,20,NA,6`. What is the expected result?
 
 <p>
-<button class="btn btn-sm btn-collapse-optional btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#task-sum" aria-expanded="false" aria-controls="task-sum">
+<button class="btn btn-sm btn-collapse-orange btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#task-sum" aria-expanded="false" aria-controls="task-sum">
 </button>
 </p>
 <div class="collapse" id="task-sum">
