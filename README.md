@@ -140,7 +140,7 @@ output:
     number_sections: false
 ```
 
-- To enable accordion tabs (for hidden answers), block titles and fontawesome, you need to add this code AFTER the YAML in the `lab_` Rmd file.
+- To enable accordion tabs (for hidden answers), chunk.titles and fontawesome, you need to add this code AFTER the YAML in the `lab_` Rmd file.
 
 ````
 ```{r,child="assets/header-lab.Rmd"}

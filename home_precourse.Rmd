@@ -1,5 +1,5 @@
 ---
-title: "&nbsp;"
+title: "Precourse"
 output:
   bookdown::html_document2:
     toc: false
@@ -14,9 +14,9 @@ library(yaml)
 upid <- yaml::read_yaml("_site.yml")$uppmax_project
 ```
 
-# Precourse {.tabset .tabset-fade}
-
 This workshop is aimed towards biologists, researchers, computer scientists or data analysts planning to run, analyse and interpret an RNA-Seq experiment. Basic knowledge of working on the Unix/Linux command line is expected.
+
+# &nbsp; {.tabset .tabset-fade}
 
 ## Preparation
 
@@ -89,7 +89,7 @@ libxml2
 
 Install the R packages. Simply copy and paste the code into R.
 
-```{r,eval=TRUE,block.title=NULL,echo=FALSE,comment="",class.output="r"}
+```{r,eval=TRUE,chunk.title=NULL,echo=FALSE,comment="",class.output="r"}
 # this code block reads package names from '_site.yml' and prints them as installation instruction.
 
 pkg <- yaml::read_yaml("_site.yml")

@@ -380,47 +380,47 @@ Icons can be added to the boxes using pre-defined classes.
 
 Currently implemented icons for boxes are `boxy-lightbulb` (<i class="fas fa-lightbulb"></i>) for tips, `boxy-exclamation` (<i class="fas fa-exclamation"></i>) for note, `boxy-clipboard-list` (<i class="fas fa-clipboard-list"></i>) for tasks, `boxy-comments` (<i class="fas fa-comments"></i>) for discuss, `boxy-desktop` (<i class="fas fa-desktop"></i>) for desktop/local, `boxy-cloud` (<i class="fas fa-cloud"></i>) for cloud, `boxy-check` (<i class="fas fa-check"></i>) for correct, `boxy-times` (<i class="fas fa-times"></i>) for wrong/false, `boxy-skull` (<i class="fas fa-skull"></i>) for danger.
 
-## Block title
+## Chunk title
 
-The code language can be displayed above input code by setting `block.title=TRUE`.
+The code language can be displayed above input code by setting `chunk.title=TRUE`.
 
 It can be placed above source block with output.
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,block.title=TRUE}\n","Sys.Date()\n","``` \n"))
+cat(paste0("```{r,chunk.title=TRUE}\n","Sys.Date()\n","``` \n"))
 ```
 
-```{r,block.title=TRUE}
+```{r,chunk.title=TRUE}
 Sys.Date()
 ```
 
 Or it can be placed above source block without output.
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,block.title=TRUE,eval=FALSE}\n","Sys.Date()\n","``` \n"))
+cat(paste0("```{r,chunk.title=TRUE,eval=FALSE}\n","Sys.Date()\n","``` \n"))
 ```
 
-```{r,block.title=TRUE,eval=FALSE}
+```{r,chunk.title=TRUE,eval=FALSE}
 Sys.Date()
 ```
 
 Or above output block if the source is hidden. In this case, the title changes to OUTPUT.
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,block.title=TRUE,echo=FALSE}\n","Sys.Date()\n","``` \n"))
+cat(paste0("```{r,chunk.title=TRUE,echo=FALSE}\n","Sys.Date()\n","``` \n"))
 ```
 
-```{r,block.title=TRUE,echo=FALSE}
+```{r,chunk.title=TRUE,echo=FALSE}
 Sys.Date()
 ```
 
 For instruction, it might be necessary to run some code and print the output as input-source-code. `echo=FALSE` hides the source code. `comment=""` hides the `##` from print statements. `class.output="r"` code highlights the output block.
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,block.title=TRUE,echo=FALSE,comment='',class.output='r'}\n","cat('Sys.Date()')\n","``` \n"))
+cat(paste0("```{r,chunk.title=TRUE,echo=FALSE,comment='',class.output='r'}\n","cat('Sys.Date()')\n","``` \n"))
 ```
 
-```{r,block.title=TRUE,echo=FALSE,comment='',class.output='r'}
+```{r,chunk.title=TRUE,echo=FALSE,comment='',class.output='r'}
 cat("Sys.Date()")
 ```
 
@@ -612,7 +612,7 @@ Sys.Date()
 
 #### Examples
 
-Here are more examples of accordions inside custom divs. 
+Here are more examples of accordions inside custom divs.
 
 ````markdown
 <div class="boxy boxy-clipboard-list">

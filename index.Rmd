@@ -6,6 +6,9 @@ output:
     number_sections: false
 ---
 
+```{r,child="assets/header-lab.Rmd"}
+```
+
 <div class="container landing-container">
 <div class="row landing-div" style="position:relative;">
 <div class="col" style="align-self:center;position:absolute;top:50px;">
@@ -46,4 +49,3 @@ output:
 </div>
 
 </div>
-
