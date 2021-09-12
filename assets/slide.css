@@ -8,9 +8,9 @@
 :root {
   --color-primary: #95b540;
   --color-border: #e8e8e8;
-  --color-text: #202020;
+  --color-text: #424949;
   --color-code-bg: #f9f9f9;
-  --color-code-inline: #d72b3f;
+  --color-code-inline: #ff665d;
   --font-base: 'Source Sans Pro';
   --font-highlight: 'Source Sans Pro';
   --font-code: 'Ubuntu Mono';
@@ -19,30 +19,35 @@
 /* FONTS -------------------------------------------------------------------- */
 
 /* body font family */
-body,p,h1,h2,h3,h4,h5,h6 {
+body, p, h1, h2, h3, h4, h5, h6,
+.remark-slide-content, .remark-slide-content body,
+.remark-slide-content p, .remark-slide-content h1,
+.remark-slide-content h2, .remark-slide-content h3,
+.remark-slide-content h4, .remark-slide-content h5,
+.remark-slide-content h6 {
   font-family: var(--font-base, 'Roboto', 'DIN', 'Helvetica', sans-serif);
   color: var(--color-text);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* title font family, weight and size */
-h1,h2 {
+h1, h2, .remark-slide-content h1, .remark-slide-content h2 {
   font-family: var(--font-highlight, 'Roboto', 'DIN', 'Helvetica', sans-serif);
   color: var(--color-text);
   font-weight: 600;
   letter-spacing: 0.02em;
 }
 
-h1 {
-  font-size: 1.802em !important;
+h1, .remark-slide-content h1 {
+  font-size: 1.802em;
   color: var(--color-text);
   margin-top: 0.9em;
   margin-bottom: 0.8em;
 }
 
-h2 {
-  font-size: 1.602em !important;
+h2, .remark-slide-content h2 {
+  font-size: 1.602em;
   color: var(--color-text);
   margin-top: 0.2em;
   margin-bottom: 0.6em;
@@ -50,26 +55,26 @@ h2 {
   /* padding-left: 0.5em; */
 }
 
-h3 {
-  font-size: 1.424em !important;
+h3, .remark-slide-content h3 {
+  font-size: 1.424em;
   margin-top: 0.6em;
   margin-bottom: 0.4em;
 }
 
-h4 {
-  font-size: 1.266em !important;
+h4, .remark-slide-content h4 {
+  font-size: 1.266em;
   margin-top: 0.5em;
   margin-bottom: 0.3em;
 }
 
-h5 {
-  font-size: 1.266em !important;
+h5, .remark-slide-content h5 {
+  font-size: 1.266em;
   margin-top: 0.5em;
   margin-bottom: 0.3em;
 }
 
-h6 {
-  font-size: 1.125em !important;
+h6, .remark-slide-content h6 {
+  font-size: 1.125em;
   margin-top: 0.5em;
   margin-bottom: 0.3em;
 }
@@ -81,7 +86,6 @@ h6 {
 
 /* code font size */
 .remark-code {
-  /*font-size: 80% !important;*/
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -95,17 +99,17 @@ h6 {
   border-radius: 3px;
   margin-right: 2px;
   padding: 2px 3px 1px;
-  /*font-size: 80% !important;*/
   color: var(--color-code-inline);
+  font-size: 90%;
 }
 
 /* new font size classes */
-.largest { font-size: 2.488em; }
-.larger { font-size: 2.074em; }
-.large { font-size: 1.44em;}
-.small { font-size: 0.833em; }
-.smaller { font-size: 0.694em; }
-.smallest{ font-size: 0.579em; }
+.largest { font-size: 2.488em !important; }
+.larger { font-size: 2.074em !important; }
+.large { font-size: 1.44em; !important}
+.small { font-size: 0.833em !important; }
+.smaller { font-size: 0.694em !important; }
+.smallest{ font-size: 0.579em !important; }
 
 .highlight {color: var(--color-primary);}
 .altcol {color: #a8b0bb;}
@@ -130,20 +134,22 @@ h6 {
 /* text on end slide */
 .end-text {
   opacity: 0.6;
-  text-indent: 0.5rem;
+  position: fixed;
+  bottom: 2em;
+  line-height: 1em;
 }
 
 /* blockquote */
 blockquote {
   border-left: 5px solid var(--color-primary);
+  display: inline-block;
   background: var(--color-code-bg);
-  padding: 0.1em;
-  padding-left: 12px;
-  margin-left: 16px;
-  margin-right: 0;
-  border-radius: 0 4px 4px 0;
+  padding: 0.01em;
+  padding-left: 0.6em;
+  padding-right: 0.7em;
+  border-radius: 4px 4px 4px 4px;
+  margin: 0;
 }
-
 
 /* links */
 a {
@@ -157,11 +163,29 @@ a:hover {
   text-decoration: underline;
 }
 
+.hljs-github .hljs-string, .hljs-github .hljs-doctag {
+    color: var(--color-code-inline);
+}
+
+/* keyboard keys display */
+.kbd {
+  background-color: var(--color-text);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 75%;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0em 0.05em;
+  font-family: var(--font-code);
+  text-align: center;
+}
+
 /* MARGINS ------------------------------------------------------------------ */
 
 /* slide margin */
 .remark-slide-content {
-  padding-top: 2em;
+  padding-top: 1.8em;
   padding-left: 2.5em;
   padding-right: 2.5em;
   padding-bottom: 2em;
@@ -188,20 +212,29 @@ p {
 /* COVER SLIDES ------------------------------------------------------------- */
 
 /* title slide image */
-.title-slide {
-  background-image: url(cover.jpg);
+.remark-slide .title-slide {
+  background-image: url(cover.png);
   background-size: cover;
-  text-align: left !important;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.title-slide a {
+  color: #808080;
 }
 
 /* end slide image */
-.end-slide {
-  background-image: url(end.jpg);
+.remark-slide .end-slide {
+  background-image: url(end.png);
   background-size: cover;
-  text-align: left !important;
+  text-align: left;
   padding-bottom: 2em;
-  padding-left: 80px;
   line-height: 12px;
+  vertical-align: middle;
+}
+
+.end-slide a {
+  color: #808080;
 }
 
 /* logo right */
@@ -227,18 +260,20 @@ p {
   padding-bottom: 0;
   margin-bottom: 0;
   color: var(--color-primary);
+  font-size: 1.9em;
 }
 
 .title-slide h2 {
   text-align: left;
-  font-weight: 500;
+  font-weight: 600;
   color: #808080;
-  margin-bottom: 0.5em;
-  margin-top: 0.2em;
+  margin-bottom: 0.1em;
+  margin-top: 0.1em;
+  letter-spacing: 2px;
 }
 
 .title-slide h3 {
-  font-size: 120% !important;
+  font-size: 120%;
   text-align: left;
   font-weight: 500;
   color: #808080;
@@ -288,7 +323,7 @@ img, video, iframe {
   float: right;
   right: 4em;
   top: 0;
-  margin-top: 0.55em;
+  margin-top: 0.70em;
 }
 
 /* image size classes */

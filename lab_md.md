@@ -124,33 +124,33 @@ Ordered lists are created using numbers.
 Using regular markdown.  
 
 ```
-![](assets/cover.jpg)
+![](assets/landing.png)
 ```
 
-![](assets/cover.jpg)
+![](assets/landing.png)
 
 The dimensions are based on image and/or fill up the entire available space. You can control the dimension as shown below.
 
 ```
-![](assets/cover.jpg){width=30%}  
+![](assets/landing.png){width=30%}  
 ```
 
 
-![](assets/cover.jpg){width=30%}   
+![](assets/landing.png){width=30%}   
 
 This image above is now 30% of it's original width.
 
 ## Using HTML
 
 This image below is 30% size.  
-`<img src="assets/cover.jpg" style="width:30%;"/>`  
+`<img src="assets/landing.png" style="width:30%;"/>`  
 
-<img src="assets/cover.jpg" style="width:30%;"/>  
+<img src="assets/landing.png" style="width:30%;"/>  
 
 This image below is 30% size, has shadow and corners rounded.  
-`<img src="assets/cover.jpg" style="width:30%;" class="fancyimage"/>`  
+`<img src="assets/landing.png" style="width:30%;" class="fancyimage"/>`  
 
-<img src="assets/cover.jpg" style="width:30%;" class="fancyimage"/>  
+<img src="assets/landing.png" style="width:30%;" class="fancyimage"/>  
 
 # Tables
 

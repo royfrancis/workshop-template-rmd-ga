@@ -9,33 +9,31 @@ output:
 ```{r,child="assets/header-lab.Rmd"}
 ```
 
-<div class="container landing-container">
-<div class="row landing-div" style="position:relative;">
-<div class="col" style="align-self:center;position:absolute;top:50px;">
-<div class="row">
+```{css,echo=FALSE}
+.title{
+  display: none;
+}
+```
 
-<div class="col-md-12 flex-box">
-<p class="landing-subtitle">
-<span style="display:block;">NBIS • Workshop</span>
-</p>
+<div class="container">
+<div class="landing">
+<div class="landing-left">
+<div class="landing-subtitle">
+## NBIS • Workshop
 </div>
-
-<div class="col-md-12 flex-box">
-<p class="landing-title">
-<span style="display:block;">Rmarkdown website template</span>
-<span style="display:block;">for workshops</span>
-</p>
+<div class="landing-title">
+# Rmarkdown website template for workshops
 </div>
-
-<div class="col-md-12 flex-box">
-<p class="medium landing-bullets">
-<span style="display:block;">Run R scripts during build</span>
-<span style="display:block;">Bootstrap framework</span>
-<span style="display:block;">Icons from FontAwesome</span>
-<span style="display:block;">Auto rendering using GitHub Actions</span>
-</p>
+<div class="landing-features">
+- Run R scripts during build
+- Bootstrap framework
+- Icons from FontAwesome
+- Xaringan slides for presentations
+- Auto rendering using GitHub Actions
 </div>
-
+</div>
+<div class="landing-right">
+<img src="assets/landing.png">
 </div>
 </div>
 </div>

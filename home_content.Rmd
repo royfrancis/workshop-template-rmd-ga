@@ -41,4 +41,11 @@ More examples of advanced usage of markdown, Rmarkdown and HTML.
 
 * [Advanced Rmarkdown](lab_rmdadv.html)
 
+# Xaringan Slides
+
+Demonstration of xaringan slides.
+
+* [Xaringan basics](slide_simple.html)  
+* [Xaringan full demo](slide_demo.html)  
+
 ***

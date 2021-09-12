@@ -11,6 +11,7 @@ output:
     chakra: 'assets/remark-latest.min.js'
     css: 'assets/slide.css'
     lib_dir: libs
+    include: NULL
     nature:
       ratio: '4:3'
       highlightLanguage: r
@@ -18,7 +19,6 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       slideNumberFormat: "%current%/%total%"
-    include: NULL
 ---
 exclude: true
 count: false

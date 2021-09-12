@@ -104,21 +104,21 @@ R chunks in RMarkdown can be used to control image display size using the arguem
 This image below is displayed at a size of 300 pixels.  
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,out.width=300}\n","knitr::include_graphics('assets/cover.jpg')\n","``` \n"))
+cat(paste0("```{r,out.width=300}\n","knitr::include_graphics('assets/landing.png')\n","``` \n"))
 ```
 
 ```{r,echo=FALSE,fig.retina=NULL,out.width=300}
-knitr::include_graphics("assets/cover.jpg")
+knitr::include_graphics("assets/landing.png")
 ```
 
-This image below is displayed at a size of 75 pixels.  
+This image below is displayed at a size of 100 pixels.  
 
 ```{r,echo=FALSE,comment=""}
-cat(paste0("```{r,out.width=75}\n","knitr::include_graphics('assets/cover.jpg')\n","``` \n"))
+cat(paste0("```{r,out.width=100}\n","knitr::include_graphics('assets/landing.png')\n","``` \n"))
 ```
 
-```{r,echo=FALSE,fig.retina=NULL,out.width=75}
-knitr::include_graphics("assets/cover.jpg")
+```{r,echo=FALSE,fig.retina=NULL,out.width=100}
+knitr::include_graphics("assets/landing.png")
 ```
 
 # Math expressions  
@@ -183,7 +183,7 @@ knitr::kable(head(iris), 'html')
 
 More advanced table using [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) and [`formattable`](https://cran.r-project.org/web/packages/formattable/vignettes/formattable-data-frame.html).
 
-`r tc(name="table_kableextra",caption="_Table using kableextra._")` 
+`r tc(name="table_kableextra",caption="_Table using kableextra._")`
 
 ```{r}
  iris[c(1:4,51:53,105:108),] %>%
@@ -212,7 +212,7 @@ iris %>%
 # Static plots  
 ## Base plot  
 
-* Plots using base R are widely used and may be good enough for most situations. 
+* Plots using base R are widely used and may be good enough for most situations.
 * But they lack a consistent coding framework.  
 
 ```{r,fig.height=6,fig.width=6}
@@ -263,8 +263,8 @@ htmltools::tagList(list(h))
 R package [`plotly`](https://plot.ly/r/) provides R binding around javascript plotting library [`plotly`](https://plot.ly).
 
 ```{r}
-p <- iris %>% 
-  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %>% 
+p <- iris %>%
+  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %>%
   add_markers()
 p
 ```
@@ -333,7 +333,7 @@ forceNetwork(Links=MisLinks,Nodes=MisNodes,Source="source",
 R package [`leaflet`](https://rstudio.github.io/leaflet/) provides R bindings for javascript mapping library; [leafletjs](http://leafletjs.com/).  
 
 ```{r}
-leaflet(height=500,width=700) %>% 
+leaflet(height=500,width=700) %>%
   addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
   #addProviderTiles(providers$Esri.NatGeoWorldMap) %>%
   addMarkers(lat=57.639327,lng=18.288534,popup="RaukR") %>%
@@ -351,13 +351,12 @@ shared_quakes <- SharedData$new(quakes[sample(nrow(quakes), 100),])
 lf <- leaflet(shared_quakes,height=300) %>%
         addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %>%
         addMarkers()
-py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %>% 
+py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %>%
         add_markers()
 
 htmltools::div(lf,py)
 ```
 
-`r fc(name="interactive_crosstalk",caption="_Linking independent plots using crosstalk._")` 
+`r fc(name="interactive_crosstalk",caption="_Linking independent plots using crosstalk._")`
 
 ***
-
