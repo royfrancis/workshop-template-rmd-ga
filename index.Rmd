@@ -17,6 +17,7 @@ output:
 
 <div class="container">
 <div class="landing">
+
 <div class="landing-left">
 <div class="landing-subtitle">
 ## NBIS • Workshop
@@ -29,18 +30,17 @@ output:
 - Bootstrap framework
 - Icons from FontAwesome
 - Xaringan slides for presentations
-- Auto rendering using GitHub Actions
+- Auto rendering using GitHub actions
 </div>
 </div>
+
 <div class="landing-right">
 <img src="assets/landing.png">
 </div>
 </div>
-</div>
-
-***
 
 <div class="landing-update">
+***
 <p class="small" style="color:#bdbdbd;">
 `r paste("Last updated on",fontawesome::fa("calendar-alt",fill="#bdbdbd"),format(Sys.time(),format='%d-%b-%Y'),"at",fontawesome::fa("clock",fill="#bdbdbd"),format(Sys.time(),format='%X'),".")`
 </p>

@@ -656,15 +656,7 @@ ul.nav a:hover {
   background-color: #566573;
 }
 
-.navbar .container {
-  max-width: 940px !important;
-}
-
 /* footer ------------------------------------------------------------------- */
-
-.footer-container {
-  max-width: 940px !important;
-}
 
 .footer {
   color: #bdbdbd;
@@ -706,10 +698,13 @@ ul.nav a:hover {
 
 /* homepage -------------------------------------------------------------------- */
 
+.container {
+  max-width: 940px;
+}
 
 .landing {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   font-weight: 300;
 }
 
@@ -729,7 +724,7 @@ ul.nav a:hover {
 .landing-features {
   font-size: 120%;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .landing-features ul {
@@ -738,8 +733,12 @@ ul.nav a:hover {
 
 .landing-right {
   align-self: center;
-  max-width: 500px;
 }
+
+.landing-left {
+  align-self: center;
+}
+
 
 @media only screen and (max-width: 575px) {
 
