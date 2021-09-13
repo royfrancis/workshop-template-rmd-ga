@@ -37,7 +37,7 @@ library(dplyr)
 name: content
 class: spaced
 
-## Contents
+# Contents
 
 * [Section 1](#section1)
 * [Section 2](#section2)
@@ -46,14 +46,14 @@ class: spaced
 ---
 name: section1
 
-## Section 1
+# Section 1
 
 This is some text here.
 
 ---
 name: section2
 
-## Section 2
+# Section 2
 
 Here is some more stuff. And below is some code.
 
@@ -67,7 +67,7 @@ if(sad==TRUE) {
 ---
 name: section3
 
-## Section 3
+# Section 3
 
 ```{r}
 head(iris)
