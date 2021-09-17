@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Usage guide</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link id="font-awesome-1-attachment" rel="attachment" href="site_libs/font-awesome-5.1.0/fonts/fontawesome-webfont.ttf"/>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="assets/lab.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+#TOC {
+  display: none !important;
+}
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+
+
+
+
+
+</div>
+
+
+<!-- rmd lab header -->
+<p><br></p>
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>This is an Rmarkdown driven website for courses designed to work with GitHub and GitHub actions. This is generally aimed at creating web pages that include executable R code (Rmarkdown documents). Regular markdown documents work as well. All code, tools (R packages) and the environment required to build the output is made available within the repo. The source materials (.R, .Rmd, .md etc) are updated and pushed to the GitHub repo. The documents are built and rendered using GitHub actions. A key thing to note is that all contents are run, executed and built every time a change is pushed. Therefore, this is not ideal for long computations. The rest of this document describes how to use this repository for your own courses.</p>
+</div>
+<div id="file-descriptions" class="section level1">
+<h1><span class="header-section-number">2</span> File descriptions</h1>
+<div id="repo-related-files" class="section level2">
+<h2><span class="header-section-number">2.1</span> Repo related files</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Filename</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_site.yml</code></td>
+<td>yml</td>
+<td>Website configuration</td>
+</tr>
+<tr class="even">
+<td>.github/workflows/main.yml</td>
+<td>yml</td>
+<td>Github action script</td>
+</tr>
+<tr class="odd">
+<td>README.md</td>
+<td>md</td>
+<td>GitHub README description</td>
+</tr>
+<tr class="even">
+<td>LICENSE</td>
+<td>-</td>
+<td>Repo usage license</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="workshop-content-files" class="section level2">
+<h2><span class="header-section-number">2.2</span> Workshop content files</h2>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Filename</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>index.Rmd</td>
+<td>Rmd</td>
+<td>Home page</td>
+</tr>
+<tr class="even">
+<td>schedule.csv</td>
+<td>csv</td>
+<td>Schedule data</td>
+</tr>
+<tr class="odd">
+<td>home_schedule.Rmd</td>
+<td>Rmd</td>
+<td>Schedule page (time, date, time table, room)</td>
+</tr>
+<tr class="even">
+<td>home_info.Rmd</td>
+<td>Rmd</td>
+<td>Practical info (travel, venue, contact)</td>
+</tr>
+<tr class="odd">
+<td>home_precourse.Rmd</td>
+<td>Rmd</td>
+<td>Precourse instructions (installation, syllabus, learning outcome)</td>
+</tr>
+<tr class="even">
+<td>home_content.Rmd</td>
+<td>Rmd</td>
+<td>All contents organised by topic</td>
+</tr>
+<tr class="odd">
+<td>slide_topic.Rmd</td>
+<td>Rmd</td>
+<td>Slide files for topics</td>
+</tr>
+<tr class="even">
+<td>lab_topic.Rmd</td>
+<td>Rmd/md</td>
+<td>Lab files for topics</td>
+</tr>
+<tr class="odd">
+<td>assets</td>
+<td>Folder</td>
+<td>Shared assets for whole website</td>
+</tr>
+<tr class="even">
+<td>data</td>
+<td>Folder</td>
+<td>Shared data for individual documents</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="creating-a-new-course" class="section level1">
+<h1><span class="header-section-number">3</span> Creating a new course</h1>
+<ol style="list-style-type: decimal">
+<li>Fork this repo to your account. Then clone it to your system.</li>
+</ol>
+<pre><code>git clone https://github.com/user/workshop-template-rmd-ga.git</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Add a personal access token under repo <em>Settings &gt; Secrets</em> and name it <code>TOKEN</code>. This needs the following permissions: <em>admin:repo_hook, repo, workflow, write:packages</em>. This token is used for pushing/pulling to the GitHub repository.</li>
+<li>Add another personal access token under repo <em>Settings &gt; Secrets</em> and name it <code>PAT</code>. This needs no permissions. This token is used when installing R packages from GitHub.</li>
+<li>Update <strong>README.md</strong>
+<ul>
+<li>Update repo and badge links</li>
+<li>Check year in the bottom</li>
+</ul></li>
+<li>Updates in folder <code>assets/</code>
+<ul>
+<li>Update links in <strong>footer-lab.html</strong>, <strong>footer-lab.Rmd</strong> and <strong>footer-slide.Rmd</strong></li>
+<li>Update logo.svg, favicon.ico and favicon.png as needed</li>
+</ul></li>
+<li>Update <strong><code>_site.yml</code></strong>
+<ul>
+<li><strong>Set argument <code>output_dir:</code> to a year-month (YYMM) combination like 1908</strong>. This is important in subsequent instances of the course, so that output from the previous instance is not overwritten.</li>
+<li>Update <code>name:</code> of the workshop</li>
+<li>Set <code>uppmax_project:</code> (Optional) This is used in <strong>home_precourse.Rmd</strong></li>
+<li>Check <code>location:</code>. This affects details displayed in <strong>home_info.Rmd</strong>.</li>
+<li>Check <code>assistants:</code> (Optional) This is a list of names of assistants involved with the course. This information will be displayed under the schedule. Leave this empty if there are no assistants.</li>
+<li>Update <code>favicon:</code> and <code>navbar/logo/image:</code> as needed</li>
+<li>Update <code>navbar/logo/href</code> to point to the correct site</li>
+<li>Update R packages under <code>packages:</code>. Add CRAN packages to <em>packages_cran_</em>, bioconductor packages to <em>packages_bioc_</em> and github packages to <em>packages_github_</em>. Packages to be installed by a student must be listed under <em>packages_xxx_student</em>. These packages are then displayed in <strong>home_precourse.Rmd</strong>. Packages not required to be installed by students, such as those relating to the functioning of this website are listed under <em>packages_xxx_repo</em>.</li>
+</ul></li>
+<li>Update <strong>index.Rmd</strong>. This is the home page.
+<ul>
+<li>Do not change the YAML header</li>
+<li>Further below, update title, subtitle and features as needed.</li>
+</ul></li>
+<li>Update <strong>schedule.csv</strong>
+<ul>
+<li>This table holds the schedule information displayed on <strong>home_schedule.Rmd</strong></li>
+<li>Columns are delimited by <code>;</code></li>
+<li>Open/edit in a spreadsheet or text editor. When saving make sure it is still delimited by <code>;</code>.</li>
+<li>Do not change the number of columns, position of columns, column names or date format</li>
+<li>Rows can be freely added or removed</li>
+<li>Set date, room, start_time, end_time, topic and person as needed</li>
+<li><em>date</em>: Full date for each day in format dd/mm/yyyy. Missing/empty cells are filled down automatically</li>
+<li><em>room</em>: (Optional) Room number for the workshop. Missing/empty cells are filled down automatically</li>
+<li><em>start_time/end_time</em>: Start and end time for session (Eg: 09:00)</li>
+<li><em>topic</em>: Topic name (Keep it short)</li>
+<li><em>teacher</em>: Name of the person covering the topic</li>
+<li><em>assistant</em>, <em><code>link_slide</code></em>, <em><code>link_lab</code></em> and <em><code>link_room</code></em> are optional. If included, it will show up on the schedule</li>
+<li><em>assistant</em> is optional for listing TAs</li>
+<li><em>link_slide</em>: (Optional) Link to the presentation. Local links can be like <code>slide_topic.html</code>. Use this labelling convention.<br />
+</li>
+<li><em>link_lab</em>: (Optional) Link to the lab material. Local links can be like <code>lab_topic.html</code>. This is the labelling convention used.<br />
+</li>
+<li><em>link_room</em>: (Optional) Link to the room location. Can be a google map link, mazemap link etc. Or perhaps a zoom link. External links must start with <code>http://</code></li>
+</ul></li>
+<li>Update <strong>home_precourse.Rmd</strong> with instructions are needed
+<ul>
+<li>R packages for students to install retrieved from <strong><code>_site.yml</code></strong> are shown here</li>
+</ul></li>
+<li>Update information contained in <strong>home_info.Rmd</strong></li>
+<li>Update or create new <strong>slide_</strong> files for presentations
+<ul>
+<li>Presentation material</li>
+<li>This can be Rmd, PDF, pptx etc.</li>
+<li>If Rmd, it must use custom YAML header (See an example slide)</li>
+<li>External data can be added to folders data and images</li>
+<li>Do not create .md and .Rmd files with same name as they both get converted to .html files</li>
+</ul></li>
+<li>Update or create new <strong>lab_</strong> Rmd or md files as documentation/report layout
+<ul>
+<li>Lab material</li>
+<li>Can be Rmd or md</li>
+<li>Simple YAML header with <code>title</code>, and/or <code>subtitle</code>, <code>author</code> is sufficient</li>
+<li>If table-of-contents is to be hidden, the YAML must be modified. See formatting tips below.</li>
+<li>External data can be added to the folder <strong>data</strong></li>
+<li>Do not create .md and .Rmd files with same name as they both get converted to .html files</li>
+</ul></li>
+</ol>
+<div class="boxy boxy-lightbulb">
+<p>The <code>assets</code> directory contains css styles, headers, footers, logos etc. If you are using images in your .Rmd file, place them in the directory <code>data/topic</code> and refer to them using relative path like <code>![](./data/topic/image.jpg)</code>. Images generated in R during rendering of the .Rmd file is automatically handled. If you have data (tsv, csv, txt text files, .Rds files), place them inside the directory <code>data/topic</code> and read them using relative path <code>x &lt;- read.delim("./data/topic/table.txt")</code>. Do not use paths that link outside of the project environment.</p>
+</div>
+<ol start="13" style="list-style-type: decimal">
+<li>Update <strong>home_content.Rmd</strong> (Optional)
+<ul>
+<li>Lists all materials organised by related topics</li>
+<li>Optionally includes extra materials not under schedule</li>
+<li>Remove from <strong><code>_site.yml</code></strong> if not needed</li>
+</ul></li>
+</ol>
+</div>
+<div id="pushing-changes" class="section level1">
+<h1><span class="header-section-number">4</span> Pushing changes</h1>
+<p>After all changes have been finalised. Commit the changes and push the repo back to GitHub.</p>
+<pre><code>git add .
+git commit -m &quot;Updated contents&quot;
+git push origin</code></pre>
+<p>Once the source files are pushed to GitHub, it is automatically rendered to the branch <strong>gh-pages</strong> and website is visible at <code>user.github.io/repo/</code>. Details are further described below. For local rendering, see below.</p>
+</div>
+<div id="formatting-tips" class="section level1">
+<h1><span class="header-section-number">5</span> Formatting tips</h1>
+<p>All .Rmd and .md files by default take the render arguments from <code>_site.yml</code> specified under <code>output: bookdown::html_document2</code>. The CSS style used is that from the default bootstrap as well as <strong>assets/lab.css</strong>. YAML instructions within each .Rmd or .md file can be used to override the defaults. It is not always necessary to use .Rmd files. .md files are fine to use as long as R related functionality is not needed. The slides, for example do not use the default template. It uses a different output format <code>xaringan::moon_reader</code> and styles from <strong>assets/slide.css</strong>.</p>
+<ul>
+<li>For <code>home_</code> or <code>lab_</code> Rmd files, the table of contents can be turned off by adding the below to YAML.</li>
+</ul>
+<pre><code>output:
+  bookdown::html_document2:
+    toc: false</code></pre>
+<ul>
+<li>For <code>home_</code> or <code>lab_</code> Rmd files, numbers before headings/titles can be turned off.</li>
+</ul>
+<pre><code>output:
+  bookdown::html_document2:
+    number_sections: false</code></pre>
+<ul>
+<li>To enable accordion tabs (for hidden answers), chunk.titles and fontawesome icons, fonts and chunk settings, you need to add this code AFTER the YAML in the <code>lab_</code> Rmd file.</li>
+</ul>
+<pre><code>```{r,child=&quot;assets/header-lab.Rmd&quot;}
+``` </code></pre>
+<p>For fonts and chunk settings, you need to add this code AFTER the YAML in the <code>slide_</code> Rmd file.</p>
+<pre><code>```{r,child=&quot;assets/header-slide.Rmd&quot;}
+``` </code></pre>
+</div>
+<div id="local-rendering" class="section level1">
+<h1><span class="header-section-number">6</span> Local rendering</h1>
+<p>For local rendering, you need to have R installed on your system. R dependencies listed in <code>site.yml</code> under <strong>packages_cran_repo</strong>, <strong>packages_bioc_repo</strong> and <strong>packages_github_repo</strong> need to be installed. And then any R packages pertaining to your particular Rmd file(s) (if needed) must be installed.</p>
+<p>Run <code>rmarkdown::render_site()</code> in the project directory. This function uses the information inside the config file <code>_site.yml</code>. The top navigation menu is described here. The default output style for all Rmd/md documents are specified under <code>output:</code>. Note that this described custom CSS style from <code>assets/labs.css</code> and custom footer from <code>assets/footer-lab.html</code>. If <code>output:</code> is specified within individual Rmd files, it overrides the default in <code>_site.yml</code>. This renders all Rmd and md files to generate the HTML files and all other necessary files (including the assets, images and data directories) and moves them into a directory specified under <code>output_dir</code> in <strong><code>_site.yml</code></strong>. Open <code>output_dir/index.html</code> to start. Remove this directory after inspection. <strong>DO NOT</strong> commit and push this output directory to GitHub.</p>
+<p>For testing purposes, you can run <code>rmarkdown::render("lab_topic.Rmd")</code> on individual Rmd/md files. This is a time-saver as the whole website need not be rendered just to preview this one file. When rendering slides, this needs to be modified as such: <code>render(slide_topic.Rmd,"xaringan::moon_reader")</code>. <code>render_site()</code> works the same for all files.</p>
+<p><strong>DO NOT</strong> push any rendered material such as <code>slide_topic.html</code>, <code>lab_topic.html</code> or supporting directories <code>slide_topic_files</code>, <code>lab_topic_files</code> etc to GitHub. These results are automatically generated through GitHub actions explained further below.</p>
+</div>
+<div id="how-it-all-works" class="section level1">
+<h1><span class="header-section-number">7</span> How it all works</h1>
+<p><img src="data/common/versioning.png" /></p>
+<p>The source content is maintained in the <strong>master</strong> branch. The source gets a new commit id anytime new content is pushed. The rendered material is maintained on the <strong>gh-pages</strong> branch under separate folders. These folders have the format YYMM. The contents of this folder is overwritten with every push unless the directory name is changed (<em>output_dir</em> in <code>_site.yml</code>). It is recommended to tag the last commit in the master branch after each workshop. The tag can be as such <strong>v1911</strong> denoting YYMM. This can be used to easily connect a rendered folder on <strong>gh-pages</strong> to the commit ID of the source code that produced it.</p>
+<div id="github-actions" class="section level2">
+<h2><span class="header-section-number">7.1</span> GitHub Actions</h2>
+<p>When the committed changes are pushed to GitHub, GitHub actions automatically runs to render the output. The <code>.github/workflows/main.yml</code> contains the workflow that runs to render the site. The script builds a linux container where R and necessary linux dependencies are installed. Then the R packages described under <strong>packages_cran_x</strong>, <strong>packages_bioc_x</strong> and <strong>packages_github_x</strong> in <code>_site,yml</code> are installed. When completed, the R function <code>rmarkdown::render_site()</code> is executed to build the website.</p>
+<p>The rendered html files, dependencies assets, data and other files are all moved into the output directory specified under <code>output_dir</code> in <code>_site.yml</code>. The details of <code>rmarkdown::render_site()</code> is described below. When the rendering is completed, the gh-pages branch is pulled down to a folder named <code>tmprepo</code>. The existence of <code>output_dir</code> in <code>tmprepo</code> is checked. If already present, it is deleted. The <code>output_dir</code> folder is copied into <code>tmprepo</code>. Lastly, a list of all folders inside <code>tmprepo</code> is added to an index file called <code>index.md</code>. This will serve as the root of gh-pages. Finally, all files are added and committed to git and pushed to the gh-pages branch. Git has permission to push to gh-pages due to GitHub repo environment variable <code>TOKEN</code>.</p>
+<p>The first GitHub build can take around 30 mins or more depending on the number of R packages. Subsequent builds take about 2 minutes since caching is enabled. Caches are removed after 7 days of last access. A push after that will require a full rebuild.</p>
+<p>The rendered version of the website is made available at <code>user.github.io/repo</code>. In addition, a parallel version of the website <strong>WITHOUT LINKS</strong> is also made available at <code>user.github.io/repo/yymm-canvas</code>. This is useful for embedding into other webpages. <strong>Note that any links that end in <code>.html</code> or <code>.pdf</code> are replaced with <code>[link removed]</code></strong>.</p>
+<hr />
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
