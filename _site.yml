@@ -3,8 +3,7 @@ name: workshop-template-rmd-ga
 output_dir: 2111
 # used site-wide wherever uppmax project ids are used
 uppmax_project: XXXXXXXX
-uppmax_res_1: XXXXXX
-# location options are linkoping, lund, umea or uppsala
+# location options are linkoping, lund, umea, uppsala or online
 location: uppsala
 assistants:
  - "JD: John Doe"

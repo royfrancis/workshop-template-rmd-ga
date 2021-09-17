@@ -48,4 +48,8 @@ Demonstration of xaringan slides.
 * [Xaringan basics](slide_simple.html)  
 * [Xaringan full demo](slide_demo.html)  
 
+# Using this repo for courses
+
+* [Usage guide](lab_usage.html)
+
 ***
