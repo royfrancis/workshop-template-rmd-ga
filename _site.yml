@@ -1,8 +1,6 @@
 name: workshop-template-rmd-ga
 # output directory used on gh-pages branch. format: YYMM
 output_dir: 2111
-# used site-wide wherever uppmax project ids are used
-uppmax_project: XXXXXXXX
 # location options are linkoping, lund, umea, uppsala or online
 location: uppsala
 assistants:

@@ -54,7 +54,6 @@ git clone https://github.com/user/workshop-template-rmd-ga.git
 6. Update **`_site.yml`**
     - **Set argument `output_dir:` to a year-month (YYMM) combination like 1908**. This is important in subsequent instances of the course, so that output from the previous instance is not overwritten.
     - Update `name:` of the workshop
-    - Set `uppmax_project:` (Optional) This is used in **home_precourse.Rmd**
     - Check `location:`. This affects details displayed in **home_info.Rmd**.
     - Check `assistants:` (Optional) This is a list of names of assistants involved with the course. This information will be displayed under the schedule. Leave this empty if there are no assistants.
     - Update `favicon:` and `navbar/logo/image:` as needed

@@ -9,12 +9,7 @@ output:
 ```{r,child="assets/header-lab.Rmd"}
 ```
 
-```{r,eval=TRUE,include=FALSE}
-library(yaml)
-upid <- yaml::read_yaml("_site.yml")$uppmax_project
-```
-
-This workshop is aimed towards biologists, researchers, computer scientists or data analysts planning to run, analyse and interpret an RNA-Seq experiment. Basic knowledge of working on the Unix/Linux command line is expected.
+This workshop is aimed towards biologists, researchers, computer scientists or data analysts planning to run, analyse and interpret biolical data. Basic knowledge of working on the Unix/Linux command line is expected.
 
 # &nbsp; {.tabset .tabset-fade}
 
@@ -22,18 +17,10 @@ This workshop is aimed towards biologists, researchers, computer scientists or d
 
 These are steps to be completed before the workshop.
 
-### Uppmax ID
-
-A remote computing cluster (UPPMAX) will be use for data analyses. A SUPR/SNIC account is needed to use UPPMAX resources.
-
-If you do not already have one, create an account at [https://supr.snic.se/](https://supr.snic.se/).
-
-<img src="data/common/supr-login.png" class="fancyimage">
-
 ### SSH & SFTP access
 
 <div class="boxy boxy-grey boxy-lightbulb">
-You need a program to connect to a remote cluster (UPPMAX). Linux and Mac users already have terminal on their systems.
+You need a program to connect to a remote cluster. Linux and Mac users already have terminal on their systems.
 
 [![](data/common/mobaxterm.png)](http://mobaxterm.mobatek.net)
 
@@ -44,14 +31,14 @@ If you are on a Windows system, we recommend [MobaXterm](http://mobaxterm.mobate
 Mac users will need to download and install [XQuartz](https://www.xquartz.org/) for X11 forwarding. *ie*; to forward remotely opened windows to local machine.
 </div>
 
-Type `ssh -Y user@rackham.uppmax.uu.se` in the terminal and then enter your password. The password will not be visible as you type.
+Type `ssh -Y user@remote-cluster.com` in the terminal and then enter your password. The password will not be visible as you type.
 
 <div class="boxy boxy-grey boxy-lightbulb">
-If you need to transfer data between UPPMAX and your computer, you can use tools SCP or SFTP through the terminal. Windows users can use the SFTP browser available with MobaXterm.
+If you need to transfer data between a remote cluster and your computer, you can use tools SCP or SFTP through the terminal. Windows users can use the SFTP browser available with MobaXterm.
 
 [![](data/common/filezilla.png)](https://filezilla-project.org/)
 
-For all users, if you prefer a GUI to upload and download files from UPPMAX, we recommend installing [FileZilla](https://filezilla-project.org/).
+For all users, if you prefer a GUI to upload and download files from a remote cluster, we recommend installing [FileZilla](https://filezilla-project.org/).
 </div>
 
 ### Tools
@@ -64,7 +51,7 @@ For all users, if you prefer a GUI to upload and download files from UPPMAX, we 
 
 <i class="fas fa-chevron-circle-right"></i> **Install [RStudio](https://www.rstudio.com/products/rstudio/download/)**. RStudio provides you with tools like code editor with highlighting, project management, version control, package building, debugger, profiler and more.
 
-<i class="fas fa-chevron-circle-right"></i> **Extra R packages** used in the workshop exercises (if any) are listed below. It is recommended that you install this in advance.
+<i class="fas fa-chevron-circle-right"></i> **Additional R packages** used in the workshop exercises (if any) are listed below. It is recommended that you install this in advance.
 
 For Linux and Mac users, you may have to install some extra OS specific libraries before installing the R packages. Pick the packages as needed based on your system below.
 
