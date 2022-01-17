@@ -78,7 +78,6 @@ packages:
   - pagedown
   - networkD3
   - plotly
-  - raster
   - rmarkdown
   - xaringan
   - yaml
