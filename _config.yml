@@ -1,0 +1,6 @@
+title: Workshop template
+description: NBIS Workshop
+repository: royfrancis/workshop-template-rmd-ga
+theme: jekyll-theme-cayman
+github:
+  is_project_page: false
